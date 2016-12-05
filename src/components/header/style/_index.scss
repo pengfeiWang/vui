@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "static/style/themes/_default.scss";
+
+##{$prefix}-header{
+  height: 60px;
+  background-color: $heading-color;
+  font-size: 20px;
+  color: $body-background;
+  border-bottom: 1px solid shade($heading-color, 20%)
+}
+##{$prefix}-header .#{$prefix}-row,
+##{$prefix}-header .#{$prefix}-col{
+	height:100%;
+}
+
+##{$prefix}-header .title{
+  padding: 0 0 0 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+  line-height: 60px;
+  font-size: 40px;
+}
+

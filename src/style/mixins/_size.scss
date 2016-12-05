@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// Sizing shortcuts
+
+@mixin size($width:auto, $height:auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size: 100%) {
+  @include size($size, $size);
+}

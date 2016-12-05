@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import 'static/style/themes/_default.scss';
+@import 'static/style/mixins/_index.scss';
+
+
+@import "./_mixin.scss";
+@import "./_search-input.scss";
+
+// Input styles
+.#{$prefix}-input {
+  @include input();
+
+  &.readonly,
+  &[readonly] {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $btn-disable-color;
+      background-color: $btn-disable-bg;
+      border-color: $btn-disable-color;
+
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+}
+
+//== Style for input-group: input with label, with button or dropdown...
+.#{$prefix}-input-group {
+  @include input-group("mioss-input");
+}
+textarea.#{$prefix}-input {
+  max-width: 100%; // prevent textearea resize from coming out of its container
+  height: auto;
+  vertical-align: bottom;
+}

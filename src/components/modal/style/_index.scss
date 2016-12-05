@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@import 'static/style/themes/_default.scss';
+@import "static/style/mixins/_index.scss";
+
+@import "./modal";
+@import "./confirm";
+
+
+.#{$prefix}-fade-enter-active{
+  animation: #{$prefix}-fade-in .3s
+}
+.#{$prefix}-fade-leave-active{
+  animation: #{$prefix}-fade-out .3s
+}
+@keyframes #{$prefix}-fade-in{
+  0%{
+    transform:translate3d(0,-20px,0);
+    opacity:0}
+  to{
+    transform:translateZ(0);
+    opacity:1
+  }
+}
+@keyframes #{$prefix}-fade-out{
+  0%{
+    transform:translateZ(0);
+    opacity:1
+  }
+  to{
+    transform:translate3d(0,-20px,0);
+    opacity:0
+  }
+}
+
