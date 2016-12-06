@@ -8,9 +8,8 @@
 @import '../../src/components/style/index.scss';
 </style>
 <script>
-import {vButton} from '../../dist/vui.js';
+import {vButton} from '../../src/components/button';
 
-console.log(vui)
 export default {
   // do
   components: {

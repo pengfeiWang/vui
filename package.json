@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "author": "老王 <oliver@note12.com>",
   "scripts": {
-    "test": "node build/dev-server.js",
-    "build": "webpack --config build/build.js"
+    "test": "node build/dev-server.js"
   },
   "keywords": [
     "vui",
