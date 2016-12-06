@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import 'static/style/mixins/index';
+@import '../../style/mixins/index';
 @mixin antCheckboxFn($checkbox-prefix-cls: "#{$prefix}-checkbox") {
   $checkbox-inner-prefix-cls: "#{$checkbox-prefix-cls}-inner";
   // 一般状态

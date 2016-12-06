@@ -1,35 +1,131 @@
-// https://github.com/shelljs/shelljs
-require('shelljs/global')
-env.NODE_ENV = 'production'
-
-var path = require('path')
-var config = require('../config')
-var ora = require('ora')
-var webpack = require('webpack')
-var webpackConfig = require('./webpack.prod.conf')
+var path = require('path');
+var webpack = require('webpack');
+var utils = require('./utils');
+var projectRoot = path.resolve(__dirname, '../');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 console.log(
   '  Tip:\n' +
   '  Built files are meant to be served over an HTTP server.\n' +
   '  Opening index.html over file:// won\'t work.\n'
-)
+);
 
-var spinner = ora('building for production...')
-spinner.start()
 
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
-rm('-rf', assetsPath)
-mkdir('-p', assetsPath)
-cp('-R', 'static/*', assetsPath)
+module.exports = {
+  entry: './index.js',
+  output: {
+    path: './dist',
+    filename: 'vui.js'
+  },
+  externals: {
+    'vue': 'vue',
+    'extend': 'extend',
+    'classnames': 'classnames'
+  },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    // new ExtractTextPlugin('[name].[contenthash].css'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    })
+    // ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
+  ],
+  resolve: {
+    extensions: ['', '.js', '.ts', '.vue'],
+    fallback: [path.join(__dirname, '../node_modules')],
+    alias: {
+      'src': path.resolve(__dirname, '../src'),
+      'components': path.resolve(__dirname, '../src/components/'),
+      'utils': path.resolve(__dirname, '../src/utils/'),
+      'config': path.resolve(__dirname, '../src/config/')
+    }
+  },
 
-webpack(webpackConfig, function (err, stats) {
-  spinner.stop()
-  if (err) throw err
-  process.stdout.write(stats.toString({
-    colors: true,
-    modules: false,
-    children: false,
-    chunks: false,
-    chunkModules: false
-  }) + '\n')
-})
+  resolveLoader: {
+    fallback: [path.join(__dirname, '../node_modules')]
+  },
+  module: {
+    preLoaders: [
+      {
+        test: /\.vue$/,
+        loader: 'eslint',
+        include: projectRoot,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        include: projectRoot,
+        exclude: /node_modules/
+      }
+      // { test: /\.ts?$/, loader: "ts-loader" }
+    ],
+    loaders: [
+      // { test: /\.ts?$/, loader: "ts-loader" },
+      {
+        test: /\.vue$/,
+        loader: 'vue'
+      },
+
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        include: projectRoot,
+        exclude: /node_modules/
+      },
+
+      {
+        test: /\.json$/,
+        loader: 'json',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('images/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.scss$/,
+        // include: projectRoot,
+        // loaders: ['style', 'css', 'sass', 'scss']
+        // loader: 'style!css!sass'
+        // loader: ExtractTextPlugin.extract('style', 'css!sass')
+        loader: 'style!css!sass'
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      }
+    ]
+  },
+  eslint: {
+    formatter: require('eslint-friendly-formatter')
+  },
+
+  vue: {
+    loaders: utils.cssLoaders(),
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['last 2 versions']
+      })
+    ]
+  }
+};

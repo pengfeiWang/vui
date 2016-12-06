@@ -6,6 +6,7 @@ let {prefix} = cfg;
 const timeoutClicked = 10;
 const timeoutClick = 500;
 export default {
+  name: 'vButton',
   data () {
     return {
       clickedTimeout: null,

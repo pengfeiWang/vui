@@ -4,6 +4,7 @@ import cfg from 'config';
 var {prefix} = cfg;
 
 export default {
+  name: 'vCol',
   props: defaultProps({
     span: oneOfType([String, Number]),
     order: oneOfType([String, Number]),

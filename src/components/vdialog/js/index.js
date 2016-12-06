@@ -6,7 +6,7 @@ var {prefix} = cfg;
 
 
 export default {
-
+  name: 'vDialog',
   props: defaultProps({
     title: '提示 ',
     modal: {

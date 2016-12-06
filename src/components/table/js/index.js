@@ -10,6 +10,7 @@ const prefixCls = cfg.prefix;
 
 
 export default {
+  name: 'vTable',
   data () {
     return {
       selectCache: {

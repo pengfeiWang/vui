@@ -6,6 +6,7 @@ import cfg from 'config';
 import selectMenu from '../template/dropdown';
 var {prefix} = cfg;
 export default {
+  name: 'vSelect',
   data () {
     return {
       ariaExpanded: false,

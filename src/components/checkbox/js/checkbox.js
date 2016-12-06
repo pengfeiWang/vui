@@ -5,7 +5,7 @@ var {prefix} = cfg;
 
 
 export default {
-
+  name: 'vCheckbox',
   data () {
 
     /*

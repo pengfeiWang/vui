@@ -3,6 +3,7 @@ import cx from 'classnames';
 import cfg from 'config';
 var {prefix} = cfg;
 export default {
+  name: 'vButtonGroup',
   props: defaultProps({
     prefixCls: prefix,
     size: oneOf(['large', 'small', undefined]),

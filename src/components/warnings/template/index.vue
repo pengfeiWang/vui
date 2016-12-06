@@ -24,6 +24,9 @@
   </div>
 </template>
 <style lang='scss'>
-@import './style/_index.scss';
+@import '../style/_index.scss';
 </style>
-<script src="./js/index.js"></script>
+<script src="../js/"></script>
+
+
+

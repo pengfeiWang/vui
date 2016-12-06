@@ -4,6 +4,7 @@ import cfg from 'config';
 var {prefix} = cfg;
 
 export default {
+  name: 'vRow',
   props: defaultProps({
     type: String,
     align: String,

@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 
-@import 'static/style/themes/_default.scss';
-@import 'static/style/mixins/_index.scss';
+@import '../../style/themes/_default.scss';
+@import '../../style/mixins/_index.scss';
 @import './_mixin.scss';
 
 $btn-prefix-cls: #{$prefix}-btn;

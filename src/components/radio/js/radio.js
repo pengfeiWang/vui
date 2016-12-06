@@ -4,6 +4,7 @@ import cfg from 'config';
 var {prefix} = cfg;
 
 export default {
+  name: 'vRadio',
   props: defaultProps({
     prefixCls: prefix,
     type: 'radio',

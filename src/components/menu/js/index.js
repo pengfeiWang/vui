@@ -21,6 +21,7 @@ function keyReg (k) {
   return reg.test(this.selectedKey) || bol;
 }
 export default {
+  name: 'vMenu',
   data () {
     return {
       selectedIdx: '',

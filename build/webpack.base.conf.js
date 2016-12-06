@@ -5,7 +5,7 @@ var projectRoot = path.resolve(__dirname, '../');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './index.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -18,17 +18,9 @@ module.exports = {
     alias: {
       'vue': 'vue/dist/vue.js',
       'src': path.resolve(__dirname, '../src'),
-      // 'static': path.resolve(__dirname, '../static/'),
-      // 'assets': path.resolve(__dirname, '../src/app/assets'),
-      'style': path.resolve(__dirname, '../src/style/'),
-      'components': path.resolve(__dirname, '../src/app/components/'),
-      'modules': path.resolve(__dirname, '../src/app/modules/'),
-      'utils': path.resolve(__dirname, '../src/app/utils/'),
-      'config': path.resolve(__dirname, '../config/app-config'),
-      'store': path.resolve(__dirname, '../src/app/store/'),
-      'mutationTypes': path.resolve(__dirname, '../src/app/store/mutation-types.js'),
-      'router': path.resolve(__dirname, '../src/app/router/'),
-      'api': path.resolve(__dirname, '../src/app/api/')
+      'components': path.resolve(__dirname, '../src/components/'),
+      'utils': path.resolve(__dirname, '../src/utils/'),
+      'config': path.resolve(__dirname, '../src/config/')
     }
   },
 
@@ -49,10 +41,8 @@ module.exports = {
         include: projectRoot,
         exclude: /node_modules/
       }
-      // { test: /\.ts?$/, loader: "ts-loader" }
     ],
     loaders: [
-      // { test: /\.ts?$/, loader: "ts-loader" },
       {
         test: /\.vue$/,
         loader: 'vue'
@@ -88,8 +78,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // include: projectRoot,
+        include: projectRoot,
         loaders: ['style', 'css', 'sass', 'scss']
+        // loader: 'style!css!sass'
+        // loader: ExtractTextPlugin.extract('style', 'css!sass')
       },
       {
         test: /\.css$/,

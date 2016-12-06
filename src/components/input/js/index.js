@@ -5,6 +5,7 @@ import cx from 'classnames';
 import cfg from 'config';
 let {prefix} = cfg;
 export default {
+  name: 'vInput',
   data () {
     return {
       text: '',

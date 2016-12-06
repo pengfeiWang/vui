@@ -1,8 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path');
-var cfg = require('./app-config');
 
-var host = cfg.host, port = cfg.port, mockPort = cfg.mockPort;
 // var mockPort = 8081;
 module.exports = {
   build: {
@@ -22,12 +20,9 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: '9999',
-    mockPort: mockPort,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-        
-    },
+    proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

@@ -5,6 +5,7 @@ import cfg from 'config';
 var {prefix} = cfg;
 
 export default {
+  name: 'vRadioGroup',
   data () {
     return {
       value: this.defaultValue

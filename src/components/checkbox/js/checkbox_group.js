@@ -7,6 +7,7 @@ import cfg from 'config';
 let {prefix} = cfg;
 let selectArr = [];
 export default {
+  name: 'vCheckboxGroup',
   data () {
     return {
       prefixCls: prefix
