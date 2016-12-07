@@ -4,12 +4,10 @@
     :style="style" ref="reference" v-clickoutside="handleClose">
     <div
       :class="selectionClasses"
-      role="combobox"
-      tabindex="0"
       @click="hanbleFocus"
-      v-model="selectValue"
        >
-       <!-- @blur="handleBlur" -->
+        <!-- v-model="selectValue" -->
+        <!-- @blur="handleBlur" -->
       <div class="mioss-select-selection__rendered">
         <div class="mioss-select-selection-selected-value">{{selectLabel}}</div>    
       </div> 

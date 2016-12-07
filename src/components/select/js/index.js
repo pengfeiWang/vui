@@ -1,8 +1,7 @@
-import { defaultProps, oneOf, Popper } from 'utils';
-import Clickoutside from 'utils/clickoutside';
-import {addResizeListener, removeResizeListener} from 'utils/resize-event';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps, oneOf, Popper } from '../../../utils';
+import Clickoutside from '../../../utils/clickoutside';
+import {addResizeListener, removeResizeListener} from '../../../utils/resize-event';
+import cfg from '../../../config';
 import selectMenu from '../template/dropdown';
 var {prefix} = cfg;
 export default {
@@ -58,28 +57,28 @@ export default {
         'large': 'lg',
         'small': 'sm'
       })[this.size] || '';
-      return cx({
+      return {
         [`${this.prefixCls}-select`]: 1,
         [`${this.prefixCls}-select-open`]: this.isOpen,
         [`${this.prefixCls}-select-disabled`]: this.disabled !== null,
         [`${this.prefixCls}-select-${sizeCls}`]: sizeCls
-      });
+      };
     },
 
     selectionClasses () {
-      return cx({
+      return {
         [`${this.prefixCls}-select-selection`]: 1,
         [`${this.prefixCls}-select-selection-${this.multiple !== null ? '-multiple' : '-single'}`]: 1
-      });
+      };
     },
 
     selectionDropdownClasses () {
-      return cx({
+      return {
         [`${this.prefixCls}-select-dropdown`]: 1,
         [`${this.prefixCls}-select-dropdown-${this.multiple !== null ? '-multiple' : '-single'}`]: 1,
         [`${this.prefixCls}-select-dropdown-placement-bottomLeft`]: 1
 
-      });
+      };
     }
   },
 
@@ -111,9 +110,9 @@ export default {
       this.isOpen = false;
     },
     defaultSelectItem (value) {
-      var cls = cx({
+      var cls = {
         [`${this.prefixCls}-select-dropdown-menu-item-selected`]: 1
-      });
+      };
       if (this.setSelectItem(value)) {
         return cls;
       }
@@ -164,6 +163,7 @@ export default {
       if (this.multiple) {
         this.handleMultipleChange(item, index, event);
       } else {
+        this.selectValue = item.value;
         this.handleSingleChange(item, index, event);
       }
     },

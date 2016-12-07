@@ -43,6 +43,7 @@ $select-prefix-cls: #{$prefix}-select;
   color: #666;
   font-size: $font-size-base;
   padding: 4px 0;
+  min-width: 200px;
   > ul > li > a {
     padding: 0;
     background-color: #fff;

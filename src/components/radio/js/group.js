@@ -1,7 +1,6 @@
-import { defaultProps, oneOf, any } from 'utils';
-import cx from 'classnames';
+import { defaultProps, oneOf, any } from '../../../utils';
+import cfg from '../../../config';
 import vRadio from '../template/radio.vue';
-import cfg from 'config';
 var {prefix} = cfg;
 
 export default {
@@ -31,11 +30,11 @@ export default {
   }),
   computed: {
     groupWapperClass () {
-      return cx({
+      return {
         [`${this.prefixCls}-group`]: 1,
         [`${this.prefixCls}-group-${this.size}`]: this.size && this.type === 'button',
         [this.className]: this.className
-      });
+      };
     }
   },
   watch: {

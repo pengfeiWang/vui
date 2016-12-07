@@ -1,41 +1,42 @@
-import 'components/style/index.scss';
-
+import './src/components/style/index.scss';
 import {
   vButton,
   vButtonGroup
-} from 'components/button';
+} from './src/components/button';
 import {
   vCheckbox,
   vCheckboxGroup
-} from 'components/checkbox';
+} from './src/components/checkbox';
+import {vIcon} from './src/components/icon';
+import {vInput} from './src/components/input';
+import {vRow, vCol} from './src/components/layout';
+import {vSelect} from './src/components/select';
 
-import {vIcon} from 'components/icon';
-import {vInput} from 'components/input';
-import {vRow, vCol} from 'components/layout';
+// /**
+//   简单实现
+// */
+import {vMenu} from './src/components/menu';
 
-/**
-  简单实现
-*/
-import {vMenu} from 'components/menu';
-import {Message} from 'components/message';
-import {Modal} from 'components/modal';
 import {
   vRadio,
   vRadioGroup
-} from 'components/radio';
-import {vTable} from 'components/table';
+} from './src/components/radio';
+import {vTable} from './src/components/table';
 
-/**
- * 临时
- */
-import {vDialog} from 'components/vdialog';
+// /**
+//  * 临时
+//  */
+import {vDialog} from './src/components/vdialog';
 
-/**
- * 临时
- */
-import {vWarnings} from 'components/warnings';
+// /**
+//  * 临时
+//  */
+import {vWarnings} from './src/components/warnings';
 
-const install = (Vue) => {
+
+import {Message} from './src/components/message';
+import {Modal} from './src/components/modal';
+const install = (Vue, options) => {
   Vue.component(vButton.name, vButton);
   Vue.component(vButtonGroup.name, vButtonGroup);
   Vue.component(vCheckbox.name, vCheckbox);
@@ -50,6 +51,7 @@ const install = (Vue) => {
   Vue.component(vTable.name, vTable);
   Vue.component(vDialog.name, vDialog);
   Vue.component(vWarnings.name, vWarnings);
+  Vue.component(vSelect.name, vSelect);
 
   Vue.prototype.$msgbox = Modal;
   Vue.prototype.$alert = Modal.alert;
@@ -61,7 +63,8 @@ const install = (Vue) => {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
-const vui = {
+export {
+  install,
   vButton,
   vButtonGroup,
   vCheckbox,
@@ -70,17 +73,14 @@ const vui = {
   vInput,
   vRow,
   vCol,
-  vMenu,
-  Message,
-  Modal,
   vRadio,
   vRadioGroup,
   vTable,
   vDialog,
-  vWarnings
+  vWarnings,
+  vSelect,
+  Message,
+  Modal
 };
-window.vui = vui;
-export default vui;
-export {vui};
 
 

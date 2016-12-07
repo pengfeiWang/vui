@@ -3,150 +3,94 @@
 @import './core/_index';
 
 
-@keyframes ivuSlideUpIn {
-  0% {
-  opacity:0;
-  transform-origin:0 0;
-  transform:scaleY(.8)
-}
-100% {
-  opacity:1;
-  transform-origin:0 0;
-  transform:scaleY(1)
-}
-}
-@keyframes ivuSlideUpOut {
-  0% {
-  opacity:1;
-  transform-origin:0 0;
-  transform:scaleY(1)
-}
-100% {
-  opacity:0;
-  transform-origin:0 0;
-  transform:scaleY(.8)
-}
-}
-.page, html, body, #vm-root{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.page{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background:#ccc;
-  
-}
-.page .content-controller{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
-}
-.expand-enter-active,
-.expand-leave-active {
-  /*transition: all .3s ease;*/
-  transition: all .3s cubic-bezier(0.18, 0.79, 0.43, 0.99);
-  // opacity: 1;
-}
-/* .expand-enter 定义进入的开始状态 */
-/* .expand-leave 定义离开的结束状态 */
-.expand-enter-active{
-  transform: translateX(0);
-  z-index: 2;
-}
-.expand-enter{
-  transform: translateX(100%)
-}
-.expand-leave-active {
-  transform: translateX(-30%);
-  opacity: 0;
-  z-index: 1;
-}
+// @keyframes ivuSlideUpIn {
+//   0% {
+//   opacity:0;
+//   transform-origin:0 0;
+//   transform:scaleY(.8)
+// }
+// 100% {
+//   opacity:1;
+//   transform-origin:0 0;
+//   transform:scaleY(1)
+// }
+// }
+// @keyframes ivuSlideUpOut {
+//   0% {
+//   opacity:1;
+//   transform-origin:0 0;
+//   transform:scaleY(1)
+// }
+// 100% {
+//   opacity:0;
+//   transform-origin:0 0;
+//   transform:scaleY(.8)
+// }
+// }
 
-.back .expand-enter-active{
-  transform: translateX(-30%);
-  opacity: 1;
-}
-.back .expand-leave-active{
-  transform: translateX(30%);
-  opacity: 0;
-}
+// .expand-enter-active,
+// .expand-leave-active {
+//   /*transition: all .3s ease;*/
+//   transition: all .3s cubic-bezier(0.18, 0.79, 0.43, 0.99);
+//   // opacity: 1;
+// }
+// /* .expand-enter 定义进入的开始状态 */
+// /* .expand-leave 定义离开的结束状态 */
+// .expand-enter-active{
+//   transform: translateX(0);
+//   z-index: 2;
+// }
+// .expand-enter{
+//   transform: translateX(100%)
+// }
+// .expand-leave-active {
+//   transform: translateX(-30%);
+//   opacity: 0;
+//   z-index: 1;
+// }
 
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter,
-.slide-fade-leave-active {
-  padding-left: 10px;
-  opacity: 0;
-}
+// .back .expand-enter-active{
+//   transform: translateX(-30%);
+//   opacity: 1;
+// }
+// .back .expand-leave-active{
+//   transform: translateX(30%);
+//   opacity: 0;
+// }
 
-/* 列表过度 */
-.list-enter-active, .list-leave-active {
-  transition: all .5s;
-  transform: scaleY(1);
-}
-.list-enter, .list-leave-active {
-  opacity: 0;
-  // height: 0; 
-  transform: scaleY(.5);
-}
+// .slide-fade-enter-active {
+//   transition: all .3s ease;
+// }
+// .slide-fade-leave-active {
+//   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+// }
+// .slide-fade-enter,
+// .slide-fade-leave-active {
+//   padding-left: 10px;
+//   opacity: 0;
+// }
 
-.fade-enter-active, .fade-leave-active {
-  transition: all .3s;
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
+// /* 列表过度 */
+// .list-enter-active, .list-leave-active {
+//   transition: all .5s;
+//   transform: scaleY(1);
+// }
+// .list-enter, .list-leave-active {
+//   opacity: 0;
+//   // height: 0; 
+//   transform: scaleY(.5);
+// }
 
-/* select */
-
-.select-slide-enter-active {
-  animation: select-slide-in .5s;
-}
-.select-slide-leave-active {
-  animation: select-slide-out .5s;
-}
-@keyframes select-slide-in {
-  0% {
-    opacity: 0;transform-origin: 0% 0%;
-    transform:  scaleY(.8);;
-  }
-  100% {
-    opacity: 1;
-    transform-origin: 0% 0%;
-    transform: scaleY(1);;
-  }
-}
-@keyframes select-slide-out {
-  0% {
-    opacity: 1;
-    transform-origin: 0% 0%;
-    transform: scaleY(1);
-  }
-  100% {
-    opacity: 0;
-    transform-origin: 0% 0%;
-    transform: scaleY(.8);;
-  }
-}
+// .fade-enter-active, .fade-leave-active {
+//   transition: all .3s;
+// }
+// .fade-enter, .fade-leave-active {
+//   opacity: 0;
+// }
 
 
 
-.menu-slide-active {
-  transform-origin: 0% 0%;
-  // animation: select-slide-out .5s;
-  transition: height .2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+
+
 
 

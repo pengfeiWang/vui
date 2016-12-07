@@ -1,6 +1,5 @@
-import { defaultProps, oneOf } from 'utils';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps, oneOf } from '../../../utils';
+import cfg from '../../../config';
 var {prefix} = cfg;
 export default {
   name: 'vButtonGroup',
@@ -16,11 +15,11 @@ export default {
         'small': 'sm'
       })[this.size] || '';
 
-      return cx({
+      return {
         [`${this.prefixCls}-btn-group`]: 1,
         [`${this.prefixCls}-btn-group-${sizeCls}`]: !!sizeCls,
         [this.className]: this.className
-      });
+      };
     }
   }
 };

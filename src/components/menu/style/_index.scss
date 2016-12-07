@@ -9,6 +9,13 @@
 
 $menu-prefix-cls: #{$prefix}-menu;
 
+.menu-slide-active {
+  transform-origin: 0% 0%;
+  // animation: select-slide-out .5s;
+  transition: height .2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
 // $btn-prefix-cls: #{$prefix}-btn;
 
 

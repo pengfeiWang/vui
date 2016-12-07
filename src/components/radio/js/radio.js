@@ -1,6 +1,5 @@
-import { defaultProps, oneOfType } from 'utils';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps, oneOfType } from '../../../utils';
+import cfg from '../../../config';
 var {prefix} = cfg;
 
 export default {
@@ -32,18 +31,18 @@ export default {
       return this.prefixCls + '-radio';
     },
     wrapClasses () {
-      return cx({
+      return {
         [`${this.buttonClasses}-wrapper`]: 1,
         [`${this.buttonClasses}-wrapper-disabled`]: this.disabled,
         [`${this.buttonClasses}-wrapper-checked`]: this.checked
-      });
+      };
     },
     cpClasses () {
-      return cx({
+      return {
         [`${this.buttonClasses}`]: 1,
         [`${this.buttonClasses}-disabled`]: this.disabled,
         [`${this.buttonClasses}-checked`]: this.checked
-      });
+      };
     }
   },
   watch: {

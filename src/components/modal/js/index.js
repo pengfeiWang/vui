@@ -1,10 +1,10 @@
 import Popup from 'vue-popup';
 import extend from 'extend';
-import {vButton} from 'components/button/';
-import {vCheckbox, vCheckboxGroup} from 'components/checkbox';
-import cfg from 'config';
-import cx from 'classnames';
+import {vButton} from '../../button/';
+import {vCheckbox, vCheckboxGroup} from '../../checkbox';
+import cfg from '../../../config';
 var {prefix} = cfg;
+
 /* 左右数据会有重复, 组件使用的数据会过滤掉左侧与右侧重复的数据 */
 /* 确定后, 要返回左侧原始数据 */
 var oldSource = [];
@@ -140,9 +140,9 @@ export default {
 
   computed: {
     typeClass () {
-      return cx({
+      return {
         [`${this.prefixCls}-modal-message-${this.type}`]: this.type
-      });
+      };
     }
   },
 

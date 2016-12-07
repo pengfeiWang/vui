@@ -52,7 +52,7 @@ const defaults = {
 import Vue from 'vue';
 import msgboxVue from '../template/index';
 import extend from 'extend';
-import cfg from 'config';
+import cfg from '../../../config';
 var {prefix} = cfg;
 
 const MessageBoxConstructor = Vue.extend(msgboxVue);

@@ -1,6 +1,6 @@
-import { defaultProps } from 'utils';
-import {vCheckbox} from 'components/checkbox';
-import cfg from 'config';
+import { defaultProps } from '../../../utils';
+import {vCheckbox} from '../../checkbox';
+import cfg from '../../../config';
 
 const prefixCls = cfg.prefix;
 export default {

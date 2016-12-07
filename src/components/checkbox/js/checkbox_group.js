@@ -1,9 +1,7 @@
-import { defaultProps } from 'utils';
+import { defaultProps } from '../../../utils';
 import vCheckbox from '../template/checkbox';
-import cx from 'classnames';
 import extend from 'extend';
-
-import cfg from 'config';
+import cfg from '../../../config';
 let {prefix} = cfg;
 let selectArr = [];
 export default {
@@ -27,10 +25,10 @@ export default {
   }),
   computed: {
     groupClasses () {
-      return cx({
+      return {
         [this.className]: !!this.className,
         [`${this.prefixCls}-group`]: 1
-      });
+      };
     }
   },
   methods: {

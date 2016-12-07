@@ -1,9 +1,8 @@
-import { defaultProps } from 'utils';
-import cx from 'classnames';
-import {vButton} from 'components/button';
-import {vCheckbox} from 'components/checkbox';
+import { defaultProps } from '../../../utils';
+import {vButton} from '../../button';
+import {vCheckbox} from '../../checkbox';
 import tableHead from './table-header.js';
-import cfg from 'config';
+import cfg from '../../../config';
 import extend from 'extend';
 
 const prefixCls = cfg.prefix;
@@ -67,12 +66,12 @@ export default {
 
   computed: {
     tableClasses () {
-      return cx({
+      return {
         [`${this.prefixCls}-table`]: 1,
         [`${this.prefixCls}-table-scroll-position-left`]: 1,
         [`${this.prefixCls}-table-${this.size}`]: this.size,
         [`${this.prefixCls}-table-font-${this.fontSize}`]: this.fontSize
-      });
+      };
     },
 
     isIndeterminate () {

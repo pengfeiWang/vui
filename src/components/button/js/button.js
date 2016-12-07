@@ -1,7 +1,6 @@
-import { defaultProps, oneOf } from 'utils';
-import {vIcon} from 'components/icon';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps, oneOf } from '../../../utils';
+import {vIcon} from '../../icon';
+import cfg from '../../../config';
 let {prefix} = cfg;
 const timeoutClicked = 10;
 const timeoutClick = 500;
@@ -72,7 +71,7 @@ export default {
         'large': 'lg',
         'small': 'sm'
       })[this.size] || '';
-      return cx({
+      return {
         [`${this.prefixCls}-btn`]: 1,
         [`${this.prefixCls}-btn-${this.type}`]: !!this.type,
         [`${this.prefixCls}-btn-${this.shape}`]: !!this.shape,
@@ -81,7 +80,7 @@ export default {
         [`${this.prefixCls}-btn-clicked`]: this.clsActive
         // ,
         // [this.className]: !!this.className
-      });
+      };
     }
   },
   components: {vIcon}

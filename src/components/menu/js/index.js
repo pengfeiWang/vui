@@ -1,6 +1,5 @@
-import { defaultProps } from 'utils/';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps } from '../../../utils';
+import cfg from '../../../config';
 
 const lineHeight = 42;
 
@@ -49,15 +48,15 @@ export default {
   }),
   computed: {
     rootClasses () {
-      return cx({
+      return {
         [`${this.prefixCls}-menu ${this.prefixCls}-menu-inline ${this.prefixCls}-menu-root`]: 1,
         [`${this.prefixCls}-menu-${this.theme}`]: this.theme
-      });
+      };
     },
     menuSubMenuClasses () {
-      return cx({
+      return {
         [`${this.prefixCls}-menu-submenu-inline ${this.prefixCls}-menu-submenu`]: 1
-      });
+      };
     }
   },
   watch: {
@@ -72,10 +71,10 @@ export default {
   methods: {
     iconClasses (idx) {
       let item = this.menus[idx];
-      return cx({
+      return {
         [`${this.prefixCls}-icon`]: 1,
         [`${this.prefixCls}-icon-${item.icon}`]: item.icon
-      });
+      };
     },
     setStyle (idx, key) {
       let bol = keyReg.call(this, key);
@@ -90,18 +89,18 @@ export default {
     setMenuSubMenuOpenClasses (key) {
       let bol = keyReg.call(this, key);
 
-      let cs = cx({
+      let cs = {
         [`${this.prefixCls}-menu-submenu-open ${this.prefixCls}-menu-submenu-selected`]: bol
-      });
+      };
 
       return bol ? cs : ' ';
     },
 
     setMenuSubmenuItemSelectedClasses (idx, key, subIdx, subKey) {
       var bol = (this.selectedKey === subKey || this.selectedItemKey === key + ':' + subKey);
-      return cx({
+      return {
         [`${this.prefixCls}-menu-item-selected`]: bol
-      });
+      };
     },
     handleClick (idx, key, e) {
       if (this.selectedKey === key) {

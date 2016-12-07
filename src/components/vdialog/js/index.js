@@ -1,7 +1,6 @@
-import { defaultProps } from 'utils';
-import {vButton} from 'components/button';
-
-import cfg from 'config';
+import { defaultProps } from '../../../utils';
+import {vButton} from '../../button';
+import cfg from '../../../config';
 var {prefix} = cfg;
 
 

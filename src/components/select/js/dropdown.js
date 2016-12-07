@@ -1,4 +1,4 @@
-import Popper from 'utils/vue-popper';
+import Popper from '../../../utils/vue-popper';
 export default {
   name: 'el-select-dropdown',
 

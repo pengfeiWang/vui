@@ -1,6 +1,5 @@
-import { defaultProps } from 'utils';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps } from '../../../utils';
+import cfg from '../../../config';
 var {prefix} = cfg;
 
 
@@ -47,21 +46,21 @@ export default {
 
   computed: {
     wrapClasses () {
-      return cx({
+      return {
         [this.className]: !!this.className,
         [`${this.prefixCls}-wrapper`]: 1
-      });
+      };
     },
 
     ckClasses () {
-      return cx({
+      return {
         [this.className]: !!this.className,
         [`${this.prefixCls}`]: 1,
         [`${this.prefixCls}-checked`]: this.checked,
         [`${this.prefixCls}-checked-${this.checked ? 1 : 0}`]: this.checked,
         [`${this.prefixCls}-disabled`]: !!this.cpDisabled,
         [`${this.prefixCls}-indeterminate`]: this.cpIndeterminate
-      });
+      };
     }
   },
   mounted () {

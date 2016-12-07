@@ -1,6 +1,5 @@
-import { defaultProps } from 'utils';
-import cx from 'classnames';
-import cfg from 'config';
+import { defaultProps } from '../../../utils';
+import cfg from '../../../config';
 var {prefix} = cfg;
 
 export default {
@@ -12,12 +11,12 @@ export default {
   }),
   computed: {
     wrapClasses () {
-      var as = cx({
+      var as = {
         [`${prefix}-row`]: 1,
         [`${prefix}-row-${this.type}`]: this.type,
         [`${prefix}-row-${this.type}-align-${this.align}`]: this.align,
         [`${prefix}-row-${this.type}-justify-${this.justify}`]: this.justify
-      });
+      };
       return as;
     }
   }

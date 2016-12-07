@@ -1,8 +1,7 @@
-import {defaultProps, oneOf} from 'utils';
+import {defaultProps, oneOf} from '../../../utils';
 import calculateNodeHeight from './calculateNodeHeight.js';
 import extend from 'extend';
-import cx from 'classnames';
-import cfg from 'config';
+import cfg from '../../../config';
 let {prefix} = cfg;
 export default {
   name: 'vInput',
@@ -55,11 +54,11 @@ export default {
         'large': 'lg',
         'small': 'sm'
       })[this.size] || '';
-      return cx({
+      return {
         [`${this.prefixCls}-input`]: 1,
         [`${this.prefixCls}-input-${sizeCls}`]: !!sizeCls,
         [`${this.className}`]: this.className
-      });
+      };
     }
   },
   watch: {

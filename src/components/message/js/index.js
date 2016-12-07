@@ -1,7 +1,6 @@
-import cfg from 'config';
-import {vIcon} from 'components/icon/';
-import cx from 'classnames';
-import {defaultProps} from 'utils';
+import cfg from '../../../config';
+import {vIcon} from '../../icon/';
+import {defaultProps} from '../../../utils';
 let {prefix} = cfg;
 var typeArr = ['info', 'success', 'error', 'warning'];
 export default {
@@ -21,9 +20,9 @@ export default {
 
   computed: {
     cpClass () {
-      return cx({
+      return {
         [`${this.prefixCls}-message-${this.type}`]: (typeArr.indexOf(this.type) >= 0)
-      });
+      };
     }
   },
 

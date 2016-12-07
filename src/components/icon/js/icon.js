@@ -1,5 +1,4 @@
 import { defaultProps } from 'utils';
-import cx from 'classnames';
 
 import cfg from 'config';
 var {prefix} = cfg;
@@ -20,12 +19,12 @@ export default {
 
   computed: {
     iconClasses () {
-      return cx({
+      return {
         [this.className]: !!this.className,
         [`${prefix}-icon`]: 1,
         [`${prefix}-icon-spin`]: !!this.spin || this.type === 'loading',
         [`${prefix}-icon-${this.type}`]: this.type
-      });
+      };
     }
   }
 };
