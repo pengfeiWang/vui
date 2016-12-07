@@ -45,7 +45,7 @@ html
 
 ```html
 <div id="root">
-    <v-button>普通按钮</v-button>
+    <v-button>button</v-button>
 </div>
 
 ```
