@@ -6,7 +6,7 @@
 ## install
 
 ```
-npm install
+npm install v2ui --save-dev
 ```
 
 ## start
