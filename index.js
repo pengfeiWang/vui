@@ -63,7 +63,7 @@ const install = (Vue, options) => {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
-export {
+const epts = {
   install,
   vButton,
   vButtonGroup,
@@ -82,5 +82,8 @@ export {
   Message,
   Modal
 };
+window.v2ui = epts;
+exports.v2ui = epts;
+module.exports = epts;
 
 

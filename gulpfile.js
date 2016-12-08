@@ -3,14 +3,15 @@ const gulp = require('gulp');
 const changed = require('gulp-changed');
 // const gulpSequence = require('gulp-sequence');
 // const babel = require('gulp-babel');
+// var glob = require('glob');
 const del = require('del');
 const webpack = require('gulp-webpack');
 const config = require('./build/build');
 const through = require('through2');
-
+const uglify = require('gulp-uglify');
 var colors = require('colors');  
 
-
+// var files = glob.sync('./front-src/**/*.js');
 
 
 colors.setTheme({  
@@ -66,7 +67,17 @@ gulp.task('buildjs', function () {
     .on('error', function(err) {
       console.log('buildjs modify!', err.message);
       this.end();
-    })    
+    })
+    .pipe(uglify({
+        mangle: {
+          // except:['require', 'exports', 'module', 'window', 'export']
+        },
+        compress: {
+          hoist_funs : false,  // hoist function declarations
+          hoist_vars : true
+        },
+        preserveComments: 'some'
+    }))
     .pipe(gulp.dest(dist))
 });
 // 监听任务 运行语句 gulp watch
