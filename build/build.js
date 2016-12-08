@@ -29,12 +29,20 @@ module.exports = {
       'process.env': {
         NODE_ENV: '"production"'
       }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
     })
+    // , new webpack.optimize.UglifyJsPlugin({
+    //   mangle: false,
+    //   sourceMap: false,
+    //   compress: {
+    //     warnings: false,
+    //     // hoist_vars: false,
+    //     // if_return: false,
+    //     // hoist_funs: false,
+    //     // properties: false,
+    //     // booleans: false,
+    //     // cascade: false
+    //   }
+    // })
   ],
   resolve: {
     extensions: ['', '.js', '.ts', '.vue'],
