@@ -1,8 +1,8 @@
 {
   "name": "v2ui",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Vue2.0 component package for Web.",
-  "main": "./dist/v2ui.js",
+  "main": "./dist/v2ui.min.js",
   "author": "老王 <oliver@note12.com>",
   "scripts": {
     "dev": "node build/dev-server.js",
