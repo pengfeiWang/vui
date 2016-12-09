@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './views/app.vue';
-import * as v2ui from '../dist/v2ui';
+import * as v2ui from '../dist/v2ui.min';
 console.log(v2ui);
 
 Vue.use(v2ui);

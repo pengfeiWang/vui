@@ -36,33 +36,6 @@ import {vWarnings} from './src/components/warnings';
 
 import {Message} from './src/components/message';
 import {Modal} from './src/components/modal';
-const install = (Vue, options) => {
-  Vue.component(vButton.name, vButton);
-  Vue.component(vButtonGroup.name, vButtonGroup);
-  Vue.component(vCheckbox.name, vCheckbox);
-  Vue.component(vCheckboxGroup.name, vCheckboxGroup);
-  Vue.component(vIcon.name, vIcon);
-  Vue.component(vInput.name, vInput);
-  Vue.component(vRow.name, vRow);
-  Vue.component(vCol.name, vCol);
-  Vue.component(vMenu.name, vMenu);
-  Vue.component(vRadio.name, vRadio);
-  Vue.component(vRadioGroup.name, vRadioGroup);
-  Vue.component(vTable.name, vTable);
-  Vue.component(vDialog.name, vDialog);
-  Vue.component(vWarnings.name, vWarnings);
-  Vue.component(vSelect.name, vSelect);
-
-  Vue.prototype.$msgbox = Modal;
-  Vue.prototype.$alert = Modal.alert;
-  Vue.prototype.$confirm = Modal.confirm;
-  Vue.prototype.$prompt = Modal.prompt;
-  Vue.prototype.$message = Message;
-};
-
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-}
 const epts = {
   install,
   vButton,
@@ -82,8 +55,27 @@ const epts = {
   Message,
   Modal
 };
+const install = (Vue, options) => {
+  Object.keys(epts).forEach((key) => {
+    Vue.component(key, epts[key]);
+  });
+
+  Vue.prototype.$msgbox = Modal;
+  Vue.prototype.$alert = Modal.alert;
+  Vue.prototype.$confirm = Modal.confirm;
+  Vue.prototype.$prompt = Modal.prompt;
+  Vue.prototype.$message = Message;
+};
+
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
+
+
+module.exports = Object.assign(epts, {install});
+
 window.v2ui = epts;
-exports.v2ui = epts;
-module.exports = epts;
+// exports.v2ui = epts;
+// module.exports = epts;
 
 

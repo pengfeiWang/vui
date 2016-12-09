@@ -1,81 +1,66 @@
 var path = require('path');
 var webpack = require('webpack');
 var utils = require('./utils');
-var projectRoot = path.resolve(__dirname, '../');
+// var projectRoot = path.resolve(__dirname, '../');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-console.log(
-  '  Tip:\n' +
-  '  Built files are meant to be served over an HTTP server.\n' +
-  '  Opening index.html over file:// won\'t work.\n'
-);
 
 
 module.exports = {
-  entry: './index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'v2ui.js'
-  },
-  externals: {
-    // 'vue': 'vue'
-    // 'extend': 'extend',
-    // 'classnames': 'classnames'
-  },
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    // new ExtractTextPlugin('[name].[contenthash].css'),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
+    entry: {
+        main: './index.js'
+    },
+    output: {
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '/dist/',
+        filename: 'v2ui.min.js',
+        library: 'v2ui'
+        ,
+        libraryTarget: 'umd',
+        umdNamedDefine: true
+    },
+    externals: {
+      vue: {
+        root: 'Vue',
+        commonjs: 'vue',
+        commonjs2: 'vue',
+        amd: 'vue'
       }
-    })
-    // , new webpack.optimize.UglifyJsPlugin({
-    //   mangle: false,
-    //   sourceMap: false,
-    //   compress: {
-    //     warnings: false,
-    //     // hoist_vars: false,
-    //     // if_return: false,
-    //     // hoist_funs: false,
-    //     // properties: false,
-    //     // booleans: false,
-    //     // cascade: false
-    //   }
-    // })
-  ],
-  resolve: {
-    extensions: ['', '.js', '.ts', '.vue'],
-    fallback: [path.join(__dirname, '../node_modules')],
-    alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'components': path.resolve(__dirname, '../src/components/'),
-      'utils': path.resolve(__dirname, '../src/utils/'),
-      'config': path.resolve(__dirname, '../src/config/')
-    }
-  },
-
-  resolveLoader: {
+    },
+    resolve: {
+        extensions: ['', '.js', '.vue']
+    },
+    resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+      plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.optimize.OccurenceOrderPlugin()
+    ],
   module: {
     preLoaders: [
       {
         test: /\.vue$/,
         loader: 'eslint',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       },
       {
         test: /\.js$/,
         loader: 'eslint',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       }
-      // { test: /\.ts?$/, loader: "ts-loader" }
     ],
     loaders: [
-      // { test: /\.ts?$/, loader: "ts-loader" },
       {
         test: /\.vue$/,
         loader: 'vue'
@@ -84,7 +69,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       },
 
