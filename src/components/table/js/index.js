@@ -1,4 +1,4 @@
-import { defaultProps } from '../../../utils';
+import { defaultProps } from '../../../utils/props';
 import {vButton} from '../../button';
 import {vCheckbox} from '../../checkbox';
 import tableHead from './table-header.js';

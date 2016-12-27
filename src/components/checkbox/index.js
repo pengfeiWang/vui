@@ -1,3 +1,5 @@
 import vCheckbox from './template/checkbox.vue';
-import vCheckboxGroup from './template/checkbox_group.vue';
-export {vCheckbox, vCheckboxGroup};
+vCheckbox.install = function (Vue) {
+  Vue.component(vCheckbox.name, vCheckbox);
+};
+export {vCheckbox};

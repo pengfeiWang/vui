@@ -1,6 +1,6 @@
-import { defaultProps, oneOf, any } from '../../../utils';
+import { defaultProps, oneOf, any } from '../../../utils/props';
 import cfg from '../../../config';
-import vRadio from '../template/radio.vue';
+import {vRadio} from '../../radio';
 var {prefix} = cfg;
 
 export default {
@@ -20,6 +20,8 @@ export default {
       type: Array,
       default: []
     },
+    keyLabel: 'label',
+    keyValue: 'value',
     name: null,
     disabled: null,
     size: oneOf(['small', 'large', undefined]),

@@ -1,3 +1,5 @@
 import vButton from './template/button.vue';
-import vButtonGroup from './template/button_group.vue';
-export {vButton, vButtonGroup};
+vButton.install = function (Vue) {
+  Vue.component(vButton.name, vButton);
+};
+export {vButton};

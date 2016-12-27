@@ -1,8 +1,8 @@
 
-import cx from 'classnames';
+// import cx from 'classnames';
 import Popper from './popper';
-import req from './req';
-import {validatorUserInfo} from './user-info-validator.js';
+// import req from './req';
+// import {validatorUserInfo} from './user-info-validator.js';
 import {
   defaultProps,
   oneOfType,
@@ -10,12 +10,11 @@ import {
   any
 } from './props';
 export {
-  validatorUserInfo,
+  // validatorUserInfo,
   defaultProps,
   oneOfType,
   Popper,
   oneOf,
-  req,
-  any,
-  cx
+  // req,
+  any
 };

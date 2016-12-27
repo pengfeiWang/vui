@@ -1,4 +1,5 @@
-import vSelect from './template/';
-// import vOption from './template/option';
-// import vDropDown from './template/dropdown';
-export {vSelect};
+import vSelect2 from './template/';
+vSelect2.install = function (Vue) {
+  Vue.component(vSelect2.name, vSelect2);
+};
+export {vSelect2};

@@ -5,7 +5,8 @@
     "es6": true,
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "commonjs": true
   },
 
  "parser": "babel-eslint",
@@ -394,7 +395,8 @@
     // 不允许空格和 tab 混合缩进
     "no-mixed-spaces-and-tabs":2,
     // 不允许多个空行
-    "no-multiple-empty-lines": [2, {"max":2}],
+    // [0, {"max":2}]
+    "no-multiple-empty-lines": 0,
     // 不允许否定的表达式
     "no-negated-condition":0,
     // 不允许使用嵌套的三元表达式
@@ -410,7 +412,7 @@
     // 不允许使用三元操作符
     "no-ternary":0,
     // 禁用行尾空格
-    "no-trailing-spaces":2,
+    "no-trailing-spaces":0,
     // 禁止标识符中有悬空下划线_bar
     "no-underscore-dangle":0,
     // 禁止可以在有更简单的可替代的表达式时使用三元操作符

@@ -1,6 +1,7 @@
 var path = require('path');
 var config = require('../config');
 var utils = require('./utils');
+var webpack = require('webpack');
 var projectRoot = path.resolve(__dirname, '../');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
@@ -23,7 +24,20 @@ module.exports = {
       'config': path.resolve(__dirname, '../src/config/')
     }
   },
-
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
+    })
+    // ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
+    // new webpack.optimize.OccurenceOrderPlugin()
+  ],
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
@@ -78,8 +92,8 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: projectRoot,
-        loaders: ['style', 'css', 'sass', 'scss']
+        // include: projectRoot,
+        loaders: ['sass']
         // loader: 'style!css!sass'
         // loader: ExtractTextPlugin.extract('style', 'css!sass')
       },

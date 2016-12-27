@@ -1,4 +1,5 @@
 import vInput from './template/';
-export {
-  vInput
+vInput.install = function (Vue) {
+  Vue.component(vInput.name, vInput);
 };
+export {vInput};

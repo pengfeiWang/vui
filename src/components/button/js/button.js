@@ -1,4 +1,4 @@
-import { defaultProps, oneOf } from '../../../utils';
+import { defaultProps, oneOf } from '../../../utils/props';
 import {vIcon} from '../../icon';
 import cfg from '../../../config';
 let {prefix} = cfg;
@@ -44,11 +44,13 @@ export default {
     },
     handleClick (event) {
       let that = this;
+
       this.clickedTimeout = setTimeout(() => {that.clsActive = true;}, timeoutClicked);
       clearTimeout(this.timeout);
       this.timeout = setTimeout(() => that.clearButton(), timeoutClick);
       // this.onClick(event);
-      this.$emit('click', event);
+
+      this.$emit('click', {ev: event, rt: this.$refs.rt });
     }
   },
   computed: {

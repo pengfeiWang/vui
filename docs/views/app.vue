@@ -39,15 +39,13 @@
     <h4>按钮</h4>  
       <v-button type="primary">主按钮</v-button>
       <v-button>次按钮</v-button>
-      <v-button type="ghost" className="disabled">幽灵按钮</v-button>
+      <v-button type="ghost">幽灵按钮</v-button>
       <v-button type="dashed">虚线按钮</v-button>
           
     <h4>按钮尺寸</h4>
         <v-button type="primary" size="large">主按钮</v-button>
-        <v-button>次按钮---<span>后退</span></v-button>
-        <v-button size="small">小按钮</v-button>
-        <v-button type="ghost">幽灵按钮</v-button>
-        <v-button type="dashed">虚线按钮</v-button>
+        <v-button type="primary">次按钮</v-button>
+        <v-button type="primary" size="small">小按钮</v-button>
 
     <h4>按钮形状</h4>
       <v-button type="primary" shape="circle" size="large" icon="search">
@@ -131,7 +129,27 @@
         <p>disabled="0" 字符串0
         </p>:disabled="0" 数字0
         </p>真值 禁用</p>
-        <v-checkbox :checked="false" :disabled="!0"  value="1212" />        
+        <v-checkbox :checked="false" :disabled="!0"  value="1212" />
+
+
+        
+          <p>
+            <v-checkbox 
+              :default-checked="checkAll" 
+              :indeterminate="indeterminate" 
+              :disabled="checkboxIsOpen" 
+              true-label="反选" 
+              false-label="全选"
+              @change="checkAllChange" />
+          </p>
+
+          
+          <v-checkbox-group 
+            :items="ops" 
+            @change="checkItemChange"
+            :default-checked="checkAll" 
+            ></v-checkbox-group>
+
     <h4>输入框</h4>
       <v-input  />
     <h5>auto size</h5>
@@ -149,39 +167,181 @@
           <v-radio value="2">选2</v-radio>
           <h5>分组</h5>
           <v-radio-group :radios="[{label:'选项1', value:1}, {label: '选项2', value:2}]" :default-value="2" ></v-radio-group>
-          <h5>单选按钮 大小</h5>
+          <h5>单选按钮</h5>
           <v-radio-group 
             type="button" size="large" :radios="[{label:'选项1', value:1}, {label: '选项2', value:2}]" 
             :default-value="2"
-          ></v-radio-group>
-          
-          <p style="line-height:.5">&nbsp;</p>
-          
-          <v-radio-group 
-            type="button"  :radios="[{label:'选项1', value:1}, {label: '选项2', value:2}]"
           ></v-radio-group>
           
 
 
 
           <h4>选择框 <span style="color:red">有问题, 待完善</span></h4>
-          <h5>default</h5>
-          <v-select 
-            :selects="[{label:'选项1', value:1}, {label: '选项2', value:2}]"
-            :default-value="1" style="width:200px;"
-          />
-      
-          <h4>large</h4>
-          <v-select 
-            :selects="[{label:'选项1', value:1}, {label: '选项2', value:2}]" 
+         
+          
+          <p>==================</p>
+
+          <h4>基本</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
             size="large"
-            disabled
-          />
-          <h4>small</h4>
-          <v-select 
-            :selects="[{label:'选项11', value:1}, {label: '选项22', value:2}]" 
-            size="small"
-          />    
+            @change="filterChange"
+          ></v-select2>
+
+          <h4>基本---传递默认值</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            :default-value="3"
+            @change="filterChange"
+          ></v-select2>
+
+          <h4>多选</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            multiple
+            @change="filterChange"
+          ></v-select2>
+
+
+          <h4>多选---传递默认值</h4>
+          <p style="font-size:12px; color:#999">
+            多选默认值参数必须是数组
+          </p>
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            multiple
+            :default-value="[2,5]"
+            @change="filterChange"
+          ></v-select2>
+          
+          <h4>筛选</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            filter
+            @change="filterChange"
+          ></v-select2>
+          
+
+          <h4>筛选--多选</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            filter
+            multiple
+            @change="filterChange"
+          ></v-select2>
+          
+          <h4>筛选--多选--传递默认值</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            filter
+            multiple
+            :default-value="[1,3]"
+            @change="filterChange"
+          ></v-select2>
+
+
+          <h4>创建</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            filter
+            create
+            @change="filterChange"
+          ></v-select2>
+
+
+          <h4>隐藏选中的项</h4>
+
+          <v-select2 
+            :selects="[
+              {label:'选项1', value:1}, 
+              {label: '选项2', value:2},
+              {label:'什么什么', value:3},
+              {label:'还是说', value:4},
+              {label:'什么什么', value:5}
+            ]" 
+            size="large"
+            filter
+            create
+            multiple
+            hide-selected-item
+            @change="filterChange"
+          ></v-select2>
+          <h5>消息提示</h5>
+
+          <v-button  @click.native="open">打开消息提示</v-button>
+          <v-button  @click.native="open1">打开成功消息提示</v-button>
+          <v-button  @click.native="open2">打开警告消息提示</v-button>
+          <v-button  @click.native="open3">打开错误消息提示</v-button>
+
+          <h5>模态窗</h5>
+          <v-button  @click.native="open4">Modal</v-button>
+          <v-button  @click.native="open5">Modal CallBack</v-button>
+          <h5>穿梭窗</h5>
+          <v-button  @click="open6">穿梭窗</v-button>
+    
+
   </div>
 </template>
 <style>
@@ -225,7 +385,245 @@
 }*/
 </style>
 <script>
+import extend from 'extend';
+function setCheckboxGroup () {
+  if (this.ops.every(item => item.defaultChecked)) {
+    this.indeterminate = true;
+    this.checkAll = true;
+  } else {
+    if (this.ops.some(item => item.defaultChecked)) {
+      this.indeterminate = true;
+    } else {
+      this.indeterminate = false;
+    }
+    this.checkAll = false;
+  }
+}
+function setCheckboxGroupChecked (status, idx) {
+  var that = this;
+  if (idx !== undefined) {
+    extend(this.ops[idx], {'defaultChecked': status});
+    this.ops.splice(idx, {'defaultChecked': status});
+  } else {
+    this.ops.map((item, index) => {
+      extend(that.ops[index], {'defaultChecked': status});
+      that.ops.splice(index, {'defaultChecked': status});
+    });
+  }
+}
 export default {
+  data () {
+    return {
+      emptyarr: [],
+      options2: [{
+          value: '选项1',
+          label: '黄金糕'
+        }, {
+          value: '选项2',
+          label: '双皮奶'
+        }, {
+          value: '选项3',
+          label: '蚵仔煎'
+        }, {
+          value: '选项4',
+          label: '龙须面'
+        }, {
+          value: '选项5',
+          label: '北京烤鸭'
+        }],
+        value2: '',
+
+      checkboxBtnDisabled: false,
+      isShow: true,
+      msg: '当前页: demo',
+      loading: false,
+      checked: true,
+      indeterminate: false,
+      checkboxIsOpen: false,
+      selectOps: [
+        {
+          value: 1,
+          label: 'luck'
+        },
+        {
+          value: 2,
+          label: 'jack',
+          disabled: true
+        },
+        {
+          value: 3,
+          label: 'tom2222'
+        },
+        {
+          value: 4,
+          label: 'tom23333332'
+        },
+        {
+          value: 5,
+          label: 'tom24444'
+        }
+      ],
+      selectOpsDefault: 1,
+      ops: [
+        {
+          label: '提示文字',
+          value: 1
+        },
+        {
+          label: '提示文字2',
+          value: 2
+        }
+      ],
+      ops2Val: 1,
+      ops2: [
+        {
+          label: '提示文字',
+          value: 1
+        },
+        {
+          label: '提示文字2',
+          value: 2
+        }
+      ],
+      ops3: [
+        {
+          label: '提示文字',
+          value: 1
+        },
+        {
+          label: '提示文字111222',
+          value: 313
+
+        },
+        {
+          label: '提示文字23131',
+          value: 2
+        }
+      ],
+      ops3Dv: 313,
+      checkAll: false,
+      inputVal1: 11,
+      inputVal2: 11
+    };
+  },
+  events: {
+  },
+  watch: {
+  },
+  methods: {
+    defaultSelectHandle (ags) {
+      console.log(ags);
+    },
+    filterChange (ags) {
+      console.log(ags);
+    },
+    inputHand2 (ags) {
+      console.log(ags);
+    },
+    checkAllChange (ags) {
+      this.checkAll = ags.checked;
+      setCheckboxGroupChecked.call(this, ags.checked);
+      setCheckboxGroup.call(this);
+    },
+    checkItemChange (ags) {
+      console.log(ags);
+      setCheckboxGroupChecked.call(this, ags.checked, ags.index);
+      setCheckboxGroup.call(this);
+    },
+    checkboxBtnCkick () {
+      var that = this;
+      this.checkboxIsOpen = !this.checkboxIsOpen;
+      this.ops.map((item, index) => {
+        extend(that.ops[index], {'disabled': that.checkboxIsOpen});
+        that.ops.splice(index, {'disabled': that.checkboxIsOpen});
+      });
+    },
+    radioGroup (ags) {
+      let {label, value} = ags;
+      console.log('label: ', label, 'value: ', value);
+    },
+    open () {
+      this.$message('这是一条消息提示');
+    },
+    open1 () {
+      this.$message({
+        message: '这是一条消息提示',
+        type: 'success'
+      });
+    },
+    open2 () {
+      this.$message({
+        message: '这是一条消息提示',
+        type: 'warning'
+      });
+    },
+    open3 () {
+      console.log(this.$transfer);
+      this.$message({
+        message: '这是一条消息提示',
+        type: 'error'
+      });
+    },
+    open4 () {
+      this.$modal({
+        message: '消息'
+      });
+    },
+    open5 () {
+      this.$modal({
+        showCancelButton: true,
+        message: '回调'
+      })
+      .then((ags) => {
+        console.log(ags);
+      })
+      .catch((ags) => {
+        console.log(ags);
+      });
+    },
+    open6 () {
+      this.$modal({
+        title: '穿梭窗',
+        dataSource: [
+          {
+            id: 3,
+            label: '第3行'
+          },
+          {
+            id: 2,
+            label: '第二行'
+          }
+        ],
+        dataTarget: [
+          {
+            id: 1,
+            label: '第一行'
+          },
+          {
+            id: 2,
+            label: '第二行'
+          }
+        ],
+        keyWord: 'id',
+        transfer: true,
+        showCancelButton: true,
+        message: '穿梭--'
+      })
+      .then((ags) => {
+        var [msgInstance, action] = ags;
+      })
+      .catch((ags) => {
+        console.log(ags);
+      });
+    }
+  },
+  created () {
+    console.log('demo create');
+  },
+  mounted () {
+    window.demo = this;
+    console.log('demo mounted');
+  }
 };
 
 </script>

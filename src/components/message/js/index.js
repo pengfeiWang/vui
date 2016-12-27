@@ -1,6 +1,5 @@
 import cfg from '../../../config';
 import {vIcon} from '../../icon/';
-import {defaultProps} from '../../../utils';
 let {prefix} = cfg;
 var typeArr = ['info', 'success', 'error', 'warning'];
 export default {

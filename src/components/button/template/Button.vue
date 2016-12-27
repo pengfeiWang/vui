@@ -3,7 +3,8 @@
   :type="htmlType || 'button'" 
   :class="btClasses"  
   :disabled="isDisabled"
-  @click="handleClick" 
+  @click="handleClick"
+  ref="rt"
   >
   <v-icon 
     v-if="isIcon" 

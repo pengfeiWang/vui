@@ -1,3 +1,5 @@
 import vRadio from './template/radio.vue';
-import vRadioGroup from './template/group.vue';
-export {vRadio, vRadioGroup};
+vRadio.install = function (Vue) {
+  Vue.component(vRadio.name, vRadio);
+};
+export {vRadio};

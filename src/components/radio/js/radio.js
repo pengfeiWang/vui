@@ -1,4 +1,4 @@
-import { defaultProps, oneOfType } from '../../../utils';
+import { defaultProps, oneOfType } from '../../../utils/props';
 import cfg from '../../../config';
 var {prefix} = cfg;
 

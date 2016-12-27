@@ -1,13 +1,13 @@
-import {defaultProps, oneOf} from '../../../utils';
+import {defaultProps, oneOf} from '../../../utils/props';
 import calculateNodeHeight from './calculateNodeHeight.js';
-import extend from 'extend';
+// import extend from 'extend';
 import cfg from '../../../config';
 let {prefix} = cfg;
 export default {
   name: 'vInput',
   data () {
     return {
-      text: '',
+      value: '',
       textareaStyles: {
         height: '',
         maxHeight: '',
@@ -20,9 +20,10 @@ export default {
     size: oneOf(['small', 'large', undefined]),
     type: 'text',
     style: null,
-    value: null,
+    // value: null,
+    defaultValue: null,
     name: null,
-    disabled: '',
+    disabled: null,
     max: null,
     min: null,
     readonly: Boolean,
@@ -31,22 +32,7 @@ export default {
       default: false
     },
     className: null,
-    placeholder: '请输入',
-    onPressEnter () {
-      // do codeing
-    },
-    onKeyDown () {
-      // do codeing
-    },
-    onChange () {
-      // do codeing
-    },
-    onBlur () {
-      // do codeing
-    },
-    onFocus () {
-      // do codeing
-    }
+    placeholder: '请输入'
   }),
   computed: {
     classes () {
@@ -62,27 +48,27 @@ export default {
     }
   },
   watch: {
-    value (v) {
-      this.text = v;
+    defaultValue (v) {
+      this.value = v;
       this.resizeTextarea();
     }
   },
   methods: {
     handleInputChange (e) {
       if (this.type === 'number') {
-        if (+(this.text) > this.max) {
-          this.text = this.max;
+        if (+(this.value) > this.max) {
+          this.value = this.max;
         }
-        if (+(this.text) < this.min) {
-          this.text = this.min;
+        if (+(this.value) < this.min) {
+          this.value = this.min;
         }
       }
-      // this.onChange(this.text, e);
+      // this.onChange(this.value, e);
       this.$emit('input', {
         ev: e,
         el: this.$refs.rt,
         input: this.$refs.input,
-        value: this.text,
+        value: this.value,
         name: this.name
       });
     },
@@ -92,20 +78,32 @@ export default {
         this.resizeTextarea(e);
       }
 
-      // this.onChange(this.text, e);
+      // this.onChange(this.value, e);
       this.$emit('input', {
         ev: e,
         el: this.$refs.rt,
         input: this.$refs.input,
-        value: this.text,
+        value: this.value,
         name: this.name
       });
     },
     handleFocus (e) {
-      this.onFocus(this.text, e);
+      this.$emit('focus', {
+        ev: e,
+        el: this.$refs.rt,
+        input: this.$refs.input,
+        value: this.value,
+        name: this.name
+      });
     },
     handleBlur (e) {
-      this.onBlur(this.text, e);
+      this.$emit('blur', {
+        ev: e,
+        el: this.$refs.rt,
+        input: this.$refs.input,
+        value: this.value,
+        name: this.name
+      });
     },
     resizeTextarea (e) {
       const { autosize } = this;
@@ -114,11 +112,11 @@ export default {
 
       if (typeof autosize === 'object') {
 
-        styleObject = extend({}, calculateNodeHeight(this.$refs.input, false, autosize.minRows, autosize.maxRows));
+        styleObject = Object.assign({}, calculateNodeHeight(this.$refs.input, false, autosize.minRows, autosize.maxRows));
 
       } else {
 
-        styleObject = extend({}, calculateNodeHeight(this.$refs.input, false, 1, null));
+        styleObject = Object.assign({}, calculateNodeHeight(this.$refs.input, false, 1, null));
       }
 
       const {height, minHeight, maxHeight} = styleObject;
@@ -132,21 +130,31 @@ export default {
 
     },
 
-    handleKeyDown (e) {
-      const { onPressEnter, onKeyDown } = this;
-      if (onPressEnter) {
-        onPressEnter(this.text, e);
-      }
-      if (onKeyDown) {
-        onKeyDown(this.text, e);
-      }
+    handleEnter (e) {
+      this.$emit('enter', {
+        ev: e,
+        el: this.$refs.rt,
+        input: this.$refs.input,
+        value: this.value,
+        name: this.name
+      });
+    },
+
+    handleDelete (e) {
+      this.$emit('delete', {
+        ev: e,
+        el: this.$refs.rt,
+        input: this.$refs.input,
+        value: this.value,
+        name: this.name
+      });
     }
   },
 
   mounted () {
 
-    if (this.value) {
-      this.text = this.value;
+    if (this.defaultValue) {
+      this.value = this.defaultValue;
     }
     this.resizeTextarea();
   }

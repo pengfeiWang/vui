@@ -1,6 +1,5 @@
 import PopperJS from './popper';
 import { PopupManager } from 'vue-popup';
-PopupManager.zIndex = 9999;
 
 /**
  * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
@@ -68,16 +67,17 @@ export default {
       if (!/^(top|bottom|left|right)(-start|-end)?$/g.test(this.placement)) {
         return;
       }
+
       const options = this.options;
       const popper = this.popperElm = this.popperElm || this.popper || this.$refs.popper;
       let reference = this.referenceElm = this.referenceElm || this.reference || this.$refs.reference;
+
       if (!reference &&
           this.$slots.reference &&
           this.$slots.reference[0]) {
         reference = this.referenceElm = this.$slots.reference[0].elm;
       }
       if (!popper || !reference) {return;}
-
       if (this.visibleArrow) {this.appendArrow(popper);}
       if (this.appendToBody) {document.body.appendChild(this.popperElm);}
       if (this.popperJS && this.popperJS.destroy) {
@@ -152,5 +152,10 @@ export default {
     this.popperElm &&
     this.popperElm.parentNode === document.body &&
     document.body.removeChild(this.popperElm);
+  },
+
+  // call destroy in keep-alive mode
+  deactivated () {
+    this.$options.beforeDestroy[0].call(this);
   }
 };

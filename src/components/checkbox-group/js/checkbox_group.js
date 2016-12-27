@@ -1,5 +1,5 @@
-import { defaultProps } from '../../../utils';
-import vCheckbox from '../template/checkbox';
+import { defaultProps } from '../../../utils/props';
+import {vCheckbox} from '../../checkbox';
 import extend from 'extend';
 import cfg from '../../../config';
 let {prefix} = cfg;

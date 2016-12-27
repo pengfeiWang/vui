@@ -1,65 +1,51 @@
 var path = require('path');
-var webpack = require('webpack');
 var utils = require('./utils');
-var projectRoot = path.resolve(__dirname, '../');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var dependencies = require('../package.json').dependencies;
 
+var fs = require('fs');
 
-console.log(
-  '  Tip:\n' +
-  '  Built files are meant to be served over an HTTP server.\n' +
-  '  Opening index.html over file:// won\'t work.\n'
-);
+var utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
+
+var externals = {
+  vue: {
+    root: 'Vue',
+    commonjs: 'vue',
+    commonjs2: 'vue',
+    amd: 'vue'
+  }
+};
+// utilsList.forEach(function (file) {
+//   file = path.basename(file, '.js');
+//   externals[`./src/utils/${file}`] = `./dist/utils/${file}`;
+// });
+Object.keys(dependencies).forEach(function (key) {
+  externals[key] = key;
+});
 
 module.exports = {
-  entry: {
-    app: './index.js'
-  },
-  output: {
-    path: './dist',
-    filename: 'vui.js'
-  },
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    // new ExtractTextPlugin('[name].[contenthash].css'),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    })
-    // ,
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
-  ],
-  resolve: {
-    extensions: ['', '.js', '.ts', '.vue'],
-    fallback: [path.join(__dirname, '../node_modules')],
-    alias: {
-      'src': path.resolve(__dirname, '../src'),
-      'components': path.resolve(__dirname, '../src/components/'),
-      'utils': path.resolve(__dirname, '../src/utils/'),
-      'config': path.resolve(__dirname, '../src/config/')
-    }
-  },
+  watch: true,
 
+  externals: externals,
+  resolve: {
+      extensions: ['', '.js', '.vue']
+  },
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  plugins: [],
   module: {
     preLoaders: [
       {
         test: /\.vue$/,
         loader: 'eslint',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       },
       {
         test: /\.js$/,
         loader: 'eslint',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       }
     ],
@@ -72,7 +58,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: projectRoot,
+        // include: projectRoot,
         exclude: /node_modules/
       },
 
@@ -107,7 +93,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        loaders: ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
   },
@@ -117,6 +103,7 @@ module.exports = {
 
   vue: {
     loaders: utils.cssLoaders(),
+    preserveWhitespace: false,
     postcss: [
       require('autoprefixer')({
         browsers: ['last 2 versions']
@@ -124,3 +111,5 @@ module.exports = {
     ]
   }
 };
+
+

@@ -8,11 +8,11 @@
         :placeholder="placeholder" 
         :class="classes"
         :readonly="readonly"
-        v-model="text"
-        :value="text"
+        v-model="value"
         el:input
         @input="handleTextareaChange"
-        @keyup.enter="handleKeyDown"
+        @keyup.enter="handleEnter"
+        @keyup.delete="handleDelete"
         @focus="handleFocus"
         @blur="handleBlur"
       ></textarea>
@@ -26,11 +26,11 @@
           :name="name"
           :placeholder="placeholder" 
           :class="classes"
-          v-model="text"
-          :value="text"
+          v-model="value"
           el:input
           @input="handleInputChange"
-          @keyup.enter="handleKeyDown"
+          @keyup.enter="handleEnter"
+          @keyup.delete="handleDelete"
           @focus="handleFocus"
           @blur="handleBlur"
         >       
@@ -45,13 +45,13 @@
             :style="style"
             :placeholder="placeholder" 
             :class="classes"
-            v-model="text"
+            v-model="value"
             el:input
-            :value="text"
             :max="max"
             :min="min"
             @input="handleInputChange"
-            @keyup.enter="handleKeyDown"
+            @keyup.enter="handleEnter"
+            @keyup.delete="handleDelete"
             @focus="handleFocus"
             @blur="handleBlur"
           >           
@@ -65,11 +65,11 @@
             :style="style"
             :placeholder="placeholder" 
             :class="classes"
-            v-model="text"
-            :value="text"
+            v-model="value"
             el:input
             @input="handleInputChange"
-            @keyup.enter="handleKeyDown"
+            @keyup.enter="handleEnter"
+            @keyup.delete="handleDelete"
             @focus="handleFocus"
             @blur="handleBlur"
           >           

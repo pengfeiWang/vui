@@ -1,14 +1,14 @@
-import { defaultProps } from '../../../utils';
+// import { defaultProps } from '../../../utils/props';
 import cfg from '../../../config';
 var {prefix} = cfg;
 
 export default {
   name: 'vRow',
-  props: defaultProps({
+  props: {
     type: String,
     align: String,
     justify: String
-  }),
+  },
   computed: {
     wrapClasses () {
       var as = {

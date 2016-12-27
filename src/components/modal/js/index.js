@@ -1,7 +1,8 @@
 import Popup from 'vue-popup';
 import extend from 'extend';
 import {vButton} from '../../button/';
-import {vCheckbox, vCheckboxGroup} from '../../checkbox';
+import {vCheckbox} from '../../checkbox';
+import {vCheckboxGroup} from '../../checkbox-group';
 import cfg from '../../../config';
 var {prefix} = cfg;
 
@@ -155,6 +156,19 @@ export default {
       this.onClose && this.onClose();
 
       this.opened = false;
+  
+  
+
+      if (this.lockScroll) {
+        setTimeout(() => {
+          if (this.modal && this.bodyOverflow !== 'hidden') {
+            document.body.style.overflow = this.bodyOverflow;
+            document.body.style.paddingRight = this.bodyPaddingRight;
+          }
+          this.bodyOverflow = null;
+          this.bodyPaddingRight = null;
+        }, 200);
+      }
 
       if (!this.transition) {
         this.doAfterClose();
@@ -167,7 +181,8 @@ export default {
         return;
       }
       if (action === 'cancel') {
-        this.value = false;
+        // this.value = false;
+        this.doClose();
         callback(this, action);
         return;
       }
@@ -324,6 +339,7 @@ export default {
       },
       customStyle: {
       },
+      
       /* 由回调控制关闭 */
       syncClose: false,
       transfer: false,

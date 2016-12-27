@@ -1,16 +1,16 @@
-import { defaultProps, oneOfType } from '../../../utils';
+// import { defaultProps, oneOfType } from '../../../utils/props';
 import cfg from '../../../config';
 var {prefix} = cfg;
 
 export default {
   name: 'vCol',
-  props: defaultProps({
-    span: oneOfType([String, Number]),
-    order: oneOfType([String, Number]),
-    offset: oneOfType([String, Number]),
-    push: oneOfType([String, Number]),
-    pull: oneOfType([String, Number])
-  }),
+  props: {
+    span: [String, Number],
+    order: [String, Number],
+    offset: [String, Number],
+    push: [String, Number],
+    pull: [String, Number]
+  },
 
   computed: {
     wrapClasses () {
