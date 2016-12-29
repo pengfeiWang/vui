@@ -386,6 +386,7 @@
 </style>
 <script>
 import extend from 'extend';
+
 function setCheckboxGroup () {
   if (this.ops.every(item => item.defaultChecked)) {
     this.indeterminate = true;
@@ -617,6 +618,9 @@ export default {
       });
     }
   },
+  // components: {
+  //   vButton
+  // },
   created () {
     console.log('demo create');
   },

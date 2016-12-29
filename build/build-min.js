@@ -14,7 +14,7 @@ var cfg = Object.assign({}, basis, {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, '../dist/'),
-    filename: packageName + '.js',
+    filename: packageName + '.min.js',
     library: packageName,
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -42,7 +42,7 @@ var cfg = Object.assign({}, basis, {
   ]
 });
 
-spinner = ora(chalk.blue('[build start]') + ' : ' + packageName + '.js');
+spinner = ora(chalk.blue('[build start]') + ' : ' + packageName + '.min.js');
 spinner.start();
 var compiler = webpack(cfg);
 compiler.run(function (err, st) {
@@ -52,5 +52,5 @@ compiler.run(function (err, st) {
     return;
   }
   spinner.stop();
-  console.log(chalk.green('[build done] '), 'success : ', packageName + '.js');
+  console.log(chalk.green('[build done] '), 'success : ', packageName + '.min.js');
 });

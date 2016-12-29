@@ -1,5 +1,5 @@
-import vSelect2 from './template/';
-vSelect2.install = function (Vue) {
-  Vue.component(vSelect2.name, vSelect2);
+import vSelect from './template/';
+vSelect.install = function (Vue) {
+  Vue.component(vSelect.name, vSelect);
 };
-export {vSelect2};
+export {vSelect};

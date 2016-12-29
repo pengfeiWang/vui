@@ -57,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
-	exports.vSelect2 = undefined;
+	exports.vSelect = undefined;
 
 	var _template = __webpack_require__(1);
 
@@ -68,7 +68,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	_template2.default.install = function (Vue) {
 	  Vue.component(_template2.default.name, _template2.default);
 	};
-	exports.vSelect2 = _template2.default;
+	exports.vSelect = _template2.default;
 
 /***/ },
 /* 1 */
