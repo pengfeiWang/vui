@@ -96,20 +96,22 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
-
-  vue: {
-    loaders: utils.cssLoaders(),
-    preserveWhitespace: false,
-    postcss: [
-      require('autoprefixer')({
-        browsers: ['last 2 versions']
-      })
-    ]
   }
+  // ,
+  // eslint: {
+  //   formatter: require('eslint-friendly-formatter')
+  // }
+  // ,
+
+  // vue: {
+  //   loaders: utils.cssLoaders(),
+  //   preserveWhitespace: false,
+  //   postcss: [
+  //     require('autoprefixer')({
+  //       browsers: ['last 2 versions']
+  //     })
+  //   ]
+  // }
 };
 
 

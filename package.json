@@ -10,7 +10,7 @@
     "build:component": "node build/build-component.js",
     "build:common": "node build/build-common.js",
     "build:prod": "node build/build.js",
-    "build": "node build/build-entry.js && node build/build-component.js && node build/build-common.js && node build/build.js"
+    "build": "node build/build-entry.js && node build/build-component.js && node build/build-common.js && node build/build.js && node build/build-min.js"
   },
   "keywords": [
     "v2ui",

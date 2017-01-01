@@ -19,6 +19,10 @@ $last-rule: null;
 .#{$btn-prefix-cls}-primary {
   $last-rule: &; 
   @include btn-primary();
+
+  &.#{$btn-prefix-cls}-loading {
+    @include button-color($color, tint($background, 20%), tint($background, 20%));
+  }
 }
 .#{$btn-prefix-cls}-group #{$last-rule}:not(:first-child):not(:last-child) {
   border-right-color: $btn-group-border;

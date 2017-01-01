@@ -33,12 +33,6 @@ var cfg = Object.assign({}, basis, {
         NODE_ENV: '"production"'
       }
     })
-    ,
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
   ]
 });
 

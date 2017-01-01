@@ -54,7 +54,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-export {
+module.exports = {
   install,
   vButton,
   vButtonGroup,
