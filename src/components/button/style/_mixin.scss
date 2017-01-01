@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 // mixins for button
 // ------------------------
 @mixin button-size($padding, $font-size, $border-radius) {
@@ -23,7 +24,7 @@
 
 @mixin button-variant-primary($color, $background) {
   @include button-color($color, $background, $background);
-
+  
   &:hover,
   &:focus {
     @include button-color($color, tint($background, 20%), tint($background, 20%));

@@ -8,8 +8,9 @@
   >
   <v-icon 
     v-if="isIcon" 
-    :type="isIcon" />
-  <slot></slot>
+    :type="isIcon"></v-icon>
+
+  <slot v-if="!shape"></slot>
 </button>
 </template>
 <style lang='scss' >

@@ -19,14 +19,8 @@ export default {
     htmlType: 'button',
     shape: oneOf(['circle', 'circle-outline', undefined, '']),
     size: oneOf(['small', 'large', undefined]),
-    disabled: {
-      type: [Boolean, String],
-      default: false
-    },
-    loading: {
-      type: [Boolean, String],
-      default: ''
-    },
+    disabled: Boolean,
+    loading: Boolean,
     icon: String,
     className: null,
     class: null,
@@ -55,6 +49,7 @@ export default {
   },
   computed: {
     isDisabled () {
+      
       if (/disabled/.test(this.className)) {
         return true;
       }

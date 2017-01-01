@@ -19,6 +19,11 @@ $last-rule: null;
 .#{$btn-prefix-cls}-primary {
   $last-rule: &; 
   @include btn-primary();
+
+  &.#{$btn-prefix-cls}-loading {
+      @include button-color($btn-primary-color, tint($btn-primary-bg, 20%), tint($btn-primary-bg, 20%));
+    // @include button-color($color, tint($background, 20%), tint($background, 20%));
+  }
 }
 .#{$btn-prefix-cls}-group #{$last-rule}:not(:first-child):not(:last-child) {
   border-right-color: $btn-group-border;
@@ -103,6 +108,15 @@ $last-rule: null;
 .#{$btn-prefix-cls}:not(.#{$btn-prefix-cls}-circle):not(.#{$btn-prefix-cls}-circle-outline).#{$btn-prefix-cls}-icon-only{
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.#{$btn-prefix-cls}-circle.#{$btn-prefix-cls}-loading{
+  padding-left: 0;
+}
+
+
+.#{$btn-prefix-cls}-circle.#{$btn-prefix-cls}-loading .#{$prefix}-icon{
+  margin-left: 0;
 }
   // &:not(1):not(1)&-icon-only {
   //   padding-left: 8px;

@@ -114,7 +114,18 @@
           <!-- <v-icon type="right"></v-icon> -->
         </v-button>
       </v-button-group>
-
+      
+      <h4>按钮加载状态</h4>
+          <v-button type="ghost" :loading="true"></v-button>
+          <v-button type="primary" :loading="true">形状</v-button>
+          <v-button type="primary" shape="circle" :loading="true"></v-button>
+          <v-button type="primary" disabled :loading="true"></v-button>
+          <v-button type="primary" :loading="true"></v-button>
+          <v-button type="primary" >按钮</v-button>
+          
+          <v-button type="primary" size="large" shape="circle" :loading="true"></v-button>
+          <v-button type="primary" shape="circle" :loading="true"></v-button>
+          <v-button type="primary" size="small" shape="circle" :loading="true"></v-button>
 
       <h4>复选框</h4>
         <p>默认</p>
