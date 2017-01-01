@@ -1,23 +1,7 @@
 import Vue from 'vue';
 import App from './views/app.vue';
-<<<<<<< HEAD
-
-import {vButton} from '../src/components/button';
-// import {vButtonGroup} from '../src/components/button-group';
-// import {vCheckbox} from '../src/components/checkbox';
-// import {vCheckboxGroup} from '../src/components/checkbox-group';
-// import {vIcon} from '../src/components/icon';
-// import {vInput} from '../src/components/input';
-// import {vRadio} from '../src/components/radio';
-// import {vRadioGroup} from '../src/components/radio-group';
 
 
-
-new Vue({
-  el: '#root',
-  components: {
-    vButton
-=======
 // import * as v2ui from '../dist/v2ui';
 // Vue.use(v2ui);
 import '../src/components/style/index.scss';
@@ -64,7 +48,6 @@ import { Modal } from '../src/components/modal/index.js';
 new Vue({
   el: '#vm-root',
   components: {
->>>>>>> 2017-1-1
   },
   render: h => h(App)
 });
