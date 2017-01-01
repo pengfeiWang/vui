@@ -828,10 +828,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('i', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('i', {
 	    class: _vm.iconClasses
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -844,8 +844,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('button', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('button', {
 	    ref: "rt",
 	    class: _vm.btClasses,
 	    attrs: {
@@ -855,11 +855,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.handleClick
 	    }
-	  }, [(_vm.isIcon) ? _h('v-icon', {
+	  }, [(_vm.isIcon) ? _c('v-icon', {
 	    attrs: {
 	      "type": _vm.isIcon
 	    }
-	  }) : _vm._e(), " ", _vm._t("default")])
+	  }) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

@@ -521,10 +521,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('i', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('i', {
 	    class: _vm.iconClasses
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -537,12 +537,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('transition', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('transition', {
 	    attrs: {
 	      "name": _vm.prefixCls + '-message-fade'
 	    }
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -554,13 +554,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "mouseenter": _vm.clearTimer,
 	      "mouseleave": _vm.startTimer
 	    }
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-message-group', _vm.cpClass]
-	  }, [_h('p', [_h('v-icon', {
+	  }, [_c('p', [_c('v-icon', {
 	    attrs: {
 	      "type": "check-circle"
 	    }
-	  }), "\n      " + _vm._s(_vm.message)]), " ", (_vm.showClose) ? _h('div', {
+	  }), _vm._v("\n      " + _vm._s(_vm.message))], 1), _vm._v(" "), (_vm.showClose) ? _c('div', {
 	    class: [_vm.prefixCls + '-message-closeBtn', _vm.prefixCls + +'-icon-close'],
 	    on: {
 	      "click": _vm.handleClose

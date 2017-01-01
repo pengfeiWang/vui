@@ -351,16 +351,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('label', {
 	    ref: "rt",
 	    class: _vm.wrapClasses
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.ckClasses,
 	    style: (_vm.style)
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.prefixCls + '-inner'
-	  }), " ", _h('input', {
+	  }), _vm._v(" "), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -376,7 +376,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    domProps: {
 	      "value": _vm.value,
 	      "checked": _vm.checked,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -396,7 +396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.handleChange]
 	    }
-	  })]), (_vm.$slots.default || _vm.cpLabel) ? _h('span', [_vm._t("default"), " ", (!_vm.$slots.default) ? [_vm._s(_vm.cpLabel)] : _vm._e()]) : _vm._e()])
+	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), _vm._v(" "), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

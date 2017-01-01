@@ -4069,15 +4069,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    class: {
 	      'is-multiple': _vm.$parent.multiple
 	    },
 	    style: ({
 	      width: _vm.minWidth
 	    })
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -4090,9 +4090,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  var _obj;
-	  return _h('div', {
+	  return _c('div', {
 	    directives: [{
 	      name: "clickoutside",
 	      rawName: "v-clickoutside",
@@ -4104,29 +4104,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	    style: ({
 	      width: _vm.width
 	    })
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: _vm.selectionClasses,
 	    on: {
 	      "click": _vm.handleFocus
 	    }
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    ref: "rendered",
 	    class: _vm.prefixCls + '-select-selection__rendered',
 	    style: ({
 	      height: _vm.renderedHeight
 	    })
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: [
-	      'select-result', {
+	      'select-result',
+	      {
 	        'placeholder': _vm.isPlaceholder,
 	        'select-result-notags': !_vm.isTags
 	      },
 	      _vm.prefixCls + '-select-selection-selected-value'
 	    ]
 	  }, [(_vm.isTags) ? [_vm._l((_vm.tagsList), function(tagsIt, tagsIdx) {
-	    return _h('span', {
+	    return _c('span', {
 	      class: [
-	        'tags', {
+	        'tags',
+	        {
 	          'tags-active': _vm.tagsIndex === tagsIdx
 	        }
 	      ],
@@ -4135,10 +4137,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.tagsDelete(tagsIt, tagsIdx)
 	        }
 	      }
-	    }, [_vm._s(tagsIt[_vm.keyLabel]) + "\n            ", _h('i', {
+	    }, [_vm._v(_vm._s(tagsIt[_vm.keyLabel]) + "\n            "), _c('i', {
 	      class: _vm.prefixCls + '-icon ' + _vm.prefixCls + '-icon-close'
 	    })])
-	  }), " ", (_vm.isTags && (_vm.create || _vm.filter)) ? _h('input', {
+	  }), _vm._v(" "), (_vm.isTags && (_vm.create || _vm.filter)) ? _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -4191,19 +4193,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }],
 	      "blur": _vm.handleBlur
 	    }
-	  }) : _vm._e()] : ["\n          " + _vm._s(_vm.nodeTagsLabel) + "\n        "], " ", " ", (_vm.filter) ? _h('span', {
+	  }) : _vm._e()] : [_vm._v("\n          " + _vm._s(_vm.nodeTagsLabel) + "\n        ")], _vm._v(" "), (_vm.filter) ? _c('span', {
 	    ref: "search__field__mirror",
 	    class: _vm.prefixCls + '-select-search__field__mirror'
-	  }, [_vm._s(_vm.value ? _vm.value : _vm.currentPlaceholder)]) : _vm._e()])]), " ", _h('span', {
+	  }, [_vm._v(_vm._s(_vm.value ? _vm.value : _vm.currentPlaceholder))]) : _vm._e()], 2)]), _vm._v(" "), _c('span', {
 	    class: _vm.prefixCls + '-select-arrow'
-	  }, [_h('b')]), " ", _h('transition', {
+	  }, [_c('b')]), _vm._v(" "), _c('transition', {
 	    attrs: {
 	      "name": "zoom-in-top"
 	    },
 	    on: {
 	      "after-leave": _vm.doDestroy
 	    }
-	  }, [_h('select-menu', {
+	  }, [_c('select-menu', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -4216,7 +4218,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "on-update-popper": _vm.updatePopper,
 	      "on-destroy-popper": _vm.destroyPopper
 	    }
-	  }, [_h('ul', {
+	  }, [_c('ul', {
 	    ref: "itembox",
 	    class: [
 	      _vm.prefixCls + '-select-dropdown-menu',
@@ -4225,7 +4227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ]
 	  }, [_vm._l((_vm.selects), function(it, index) {
 	    var _obj;
-	    return _h('li', {
+	    return _c('li', {
 	      directives: [{
 	        name: "show",
 	        rawName: "v-show",
@@ -4236,7 +4238,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      refInFor: true,
 	      class: [
 	        _vm.defaultSelectItem(it[_vm.keyValue]),
-	        _vm.prefixCls + '-select-dropdown-menu-item', ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = index === _vm.keyIndex, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-none")] = _vm.hideSelected(it, index), _obj[(_vm.prefixCls + "-select-dropdown-menu-item-disabled")] = it.disabled, _obj )
+	        _vm.prefixCls + '-select-dropdown-menu-item',
+	        ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = index === _vm.keyIndex, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-none")] = _vm.hideSelected(it, index), _obj[(_vm.prefixCls + "-select-dropdown-menu-item-disabled")] = it.disabled, _obj )
 	      ],
 	      attrs: {
 	        "data-key": _vm.keyIndex,
@@ -4254,8 +4257,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.leaveItem(index, $event)
 	        }
 	      }
-	    }, [_vm._s(it[_vm.keyLabel])])
-	  }), " ", _h('li', {
+	    }, [_vm._v(_vm._s(it[_vm.keyLabel]))])
+	  }), _vm._v(" "), _c('li', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -4264,7 +4267,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }],
 	    ref: "create_select_item",
 	    class: [
-	      _vm.prefixCls + '-select-dropdown-menu-item', ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = _vm.selects.length === _vm.keyIndex, _obj )
+	      _vm.prefixCls + '-select-dropdown-menu-item',
+	      ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = _vm.selects.length === _vm.keyIndex, _obj )
 	    ],
 	    on: {
 	      "click": function($event) {
@@ -4277,7 +4281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.leaveItem(_vm.selects.length, $event)
 	      }
 	    }
-	  }, ["\n            " + _vm._s(_vm.value) + "\n          "])])])])])])
+	  }, [_vm._v("\n            " + _vm._s(_vm.value) + "\n          ")])], 2)])], 1)], 1)])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

@@ -3092,10 +3092,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('i', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('i', {
 	    class: _vm.iconClasses
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -3108,8 +3108,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('button', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('button', {
 	    ref: "rt",
 	    class: _vm.btClasses,
 	    attrs: {
@@ -3119,11 +3119,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.handleClick
 	    }
-	  }, [(_vm.isIcon) ? _h('v-icon', {
+	  }, [(_vm.isIcon) ? _c('v-icon', {
 	    attrs: {
 	      "type": _vm.isIcon
 	    }
-	  }) : _vm._e(), " ", _vm._t("default")])
+	  }) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -3311,16 +3311,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('label', {
 	    ref: "rt",
 	    class: _vm.wrapClasses
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.ckClasses,
 	    style: (_vm.style)
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.prefixCls + '-inner'
-	  }), " ", _h('input', {
+	  }), _vm._v(" "), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -3336,7 +3336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    domProps: {
 	      "value": _vm.value,
 	      "checked": _vm.checked,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -3356,7 +3356,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.handleChange]
 	    }
-	  })]), (_vm.$slots.default || _vm.cpLabel) ? _h('span', [_vm._t("default"), " ", (!_vm.$slots.default) ? [_vm._s(_vm.cpLabel)] : _vm._e()]) : _vm._e()])
+	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), _vm._v(" "), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -3514,12 +3514,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    ref: "gp_rt",
 	    class: _vm.groupClasses
-	  }, [_vm._l((_vm.items), function(it, index) {
-	    return (_vm.isEmptyItem(it)) ? _h('v-checkbox', {
+	  }, _vm._l((_vm.items), function(it, index) {
+	    return (_vm.isEmptyItem(it)) ? _c('v-checkbox', {
 	      key: _vm.renderRandom(),
 	      attrs: {
 	        "type": "checkbox",
@@ -3536,7 +3536,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        "change": _vm.handleChange
 	      }
 	    }) : _vm._e()
-	  })])
+	  }))
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -3549,12 +3549,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('transition', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('transition', {
 	    attrs: {
 	      "name": _vm.prefixCls + '-fade'
 	    }
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -3571,37 +3571,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "height": "100%",
 	      "z-index": "9999"
 	    }
-	  }, [(_vm.modal) ? _h('div', {
+	  }, [(_vm.modal) ? _c('div', {
 	    class: [_vm.prefixCls + '-modal-mask']
-	  }) : _vm._e(), " ", " ", _h('div', {
+	  }) : _vm._e(), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-wrap']
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal'],
 	    style: (_vm.customStyle)
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal-content']
-	  }, [_h('button', {
+	  }, [_c('button', {
 	    class: [_vm.prefixCls + '-modal-close'],
 	    on: {
 	      "click": function($event) {
 	        _vm.handleAction('cancel')
 	      }
 	    }
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: [_vm.prefixCls + '-modal-close-x']
-	  })]), " ", (!!_vm.title) ? _h('div', {
+	  })]), _vm._v(" "), (!!_vm.title) ? _c('div', {
 	    class: [_vm.prefixCls + '-modal-header']
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal-title']
-	  }, [_vm._s(_vm.title)])]) : _vm._e(), " ", " ", _h('div', {
+	  }, [_vm._v(_vm._s(_vm.title))])]) : _vm._e(), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-body']
-	  }, [(_vm.transfer) ? [_h('div', {
+	  }, [(_vm.transfer) ? [_c('div', {
 	    staticClass: "mioss-transfer"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-transfer-list"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-transfer-list-header"
-	  }, [_h('v-checkbox', {
+	  }, [_c('v-checkbox', {
 	    attrs: {
 	      "name": "left",
 	      "default-checked": _vm.leftAllChecked,
@@ -3610,11 +3610,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "change": _vm.selectAll
 	    }
-	  }, [_h('span', [_vm._s(_vm.sourceSelectSize)]), " ", _h('span', ["/"]), " ", _h('span', [_vm._s(_vm.sourceSize)])])]), " ", _h('div', {
+	  }, [_c('span', [_vm._v(_vm._s(_vm.sourceSelectSize))]), _vm._v(" "), _c('span', [_vm._v("/")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.sourceSize))])])], 1), _vm._v(" "), _c('div', {
 	    staticClass: "mioss-transfer-list-body"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-transfer-list-content"
-	  }, [_h('v-checkbox-group', {
+	  }, [_c('v-checkbox-group', {
 	    attrs: {
 	      "name": "left",
 	      "items": _vm.dataSource,
@@ -3624,9 +3624,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "change": _vm.selectSingle
 	    }
-	  })])])]), " ", " ", _h('div', {
+	  })], 1)])]), _vm._v(" "), _c('div', {
 	    staticClass: "mioss-transfer-operation"
-	  }, [_h('v-button', {
+	  }, [_c('v-button', {
 	    attrs: {
 	      "type": "primary",
 	      "disabled": _vm.toLeftButtonDisabled,
@@ -3638,7 +3638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.transferDirection('left')
 	      }
 	    }
-	  }), " ", _h('v-button', {
+	  }), _vm._v(" "), _c('v-button', {
 	    attrs: {
 	      "type": "primary",
 	      "disabled": _vm.toRightButtonDisabled,
@@ -3650,11 +3650,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.transferDirection('right')
 	      }
 	    }
-	  })]), " ", _h('div', {
+	  })], 1), _vm._v(" "), _c('div', {
 	    staticClass: "mioss-transfer-list"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-transfer-list-header"
-	  }, [_h('v-checkbox', {
+	  }, [_c('v-checkbox', {
 	    attrs: {
 	      "name": "right",
 	      "default-checked": _vm.rightAllChecked,
@@ -3663,11 +3663,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "change": _vm.selectAll
 	    }
-	  }, [_h('span', [_vm._s(_vm.targetSelectSize)]), " ", _h('span', ["/"]), " ", _h('span', [_vm._s(_vm.targetSize)])])]), " ", _h('div', {
+	  }, [_c('span', [_vm._v(_vm._s(_vm.targetSelectSize))]), _vm._v(" "), _c('span', [_vm._v("/")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.targetSize))])])], 1), _vm._v(" "), _c('div', {
 	    staticClass: "mioss-transfer-list-body"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-transfer-list-content"
-	  }, [_h('v-checkbox-group', {
+	  }, [_c('v-checkbox-group', {
 	    attrs: {
 	      "name": "right",
 	      "items": _vm.dataTarget,
@@ -3677,13 +3677,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "change": _vm.selectSingle
 	    }
-	  })])])])])] : [(_vm.message) ? [_h('div', {
+	  })], 1)])])])] : [(_vm.message) ? [_c('div', {
 	    class: _vm.typeClass
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: [_vm.prefixCls + '-icon']
-	  }), " " + _vm._s(_vm.message) + "\n              "])] : [_vm._t("default")], " "], " "]), " ", " ", _h('div', {
+	  }), _vm._v(" " + _vm._s(_vm.message) + "\n              ")])] : [_vm._t("default")]]], 2), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-footer']
-	  }, [(_vm.showCancelButton) ? _h('v-button', {
+	  }, [(_vm.showCancelButton) ? _c('v-button', {
 	    attrs: {
 	      "size": "large"
 	    },
@@ -3692,7 +3692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.handleAction('cancel')
 	      }
 	    }
-	  }, [_h('span', [_vm._s(_vm.cancelButtonText)])]) : _vm._e(), " ", _h('v-button', {
+	  }, [_c('span', [_vm._v(_vm._s(_vm.cancelButtonText))])]) : _vm._e(), _vm._v(" "), _c('v-button', {
 	    attrs: {
 	      "type": "primary",
 	      "size": "large",
@@ -3703,7 +3703,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.handleAction('confirm')
 	      }
 	    }
-	  }, [_h('span', [_vm._s(_vm.confirmButtonText)])])]), " "])])])])])
+	  }, [_c('span', [_vm._v(_vm._s(_vm.confirmButtonText))])])], 1)])])])])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

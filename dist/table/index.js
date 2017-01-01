@@ -675,10 +675,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('i', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('i', {
 	    class: _vm.iconClasses
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -691,8 +691,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('button', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('button', {
 	    ref: "rt",
 	    class: _vm.btClasses,
 	    attrs: {
@@ -702,11 +702,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.handleClick
 	    }
-	  }, [(_vm.isIcon) ? _h('v-icon', {
+	  }, [(_vm.isIcon) ? _c('v-icon', {
 	    attrs: {
 	      "type": _vm.isIcon
 	    }
-	  }) : _vm._e(), " ", _vm._t("default")])
+	  }) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -894,16 +894,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('label', {
 	    ref: "rt",
 	    class: _vm.wrapClasses
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.ckClasses,
 	    style: (_vm.style)
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: _vm.prefixCls + '-inner'
-	  }), " ", _h('input', {
+	  }), _vm._v(" "), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -919,7 +919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    domProps: {
 	      "value": _vm.value,
 	      "checked": _vm.checked,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -939,7 +939,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.handleChange]
 	    }
-	  })]), (_vm.$slots.default || _vm.cpLabel) ? _h('span', [_vm._t("default"), " ", (!_vm.$slots.default) ? [_vm._s(_vm.cpLabel)] : _vm._e()]) : _vm._e()])
+	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), _vm._v(" "), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -1047,20 +1047,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
 	    class: _vm.tableClasses
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-table-content"
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    staticClass: "mioss-table-body"
-	  }, [_h('table', {}, [_h('colgroup', [(_vm.rowSelection) ? _h('col') : _vm._e(), " ", _vm._l((_vm.columns), function(it) {
-	    return _h('col', {
+	  }, [_c('table', {}, [_c('colgroup', [(_vm.rowSelection) ? _c('col') : _vm._e(), _vm._v(" "), _vm._l((_vm.columns), function(it) {
+	    return _c('col', {
 	      attrs: {
 	        "width": it.width
 	      }
 	    })
-	  })]), " ", _h('table-head', {
+	  })], 2), _vm._v(" "), _c('table-head', {
 	    attrs: {
 	      "checked": _vm.checkAll,
 	      "indeterminate": _vm.isIndeterminate,
@@ -1069,26 +1069,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "columns": _vm.columns,
 	      "on-change": _vm.handleChange
 	    }
-	  }), " ", _h('tbody', {
+	  }), _vm._v(" "), _c('tbody', {
 	    staticClass: "mioss-table-tbody"
-	  }, [_vm._l((_vm.dataSource), function(it, sIdx) {
-	    return _h('tr', {
+	  }, _vm._l((_vm.dataSource), function(it, sIdx) {
+	    return _c('tr', {
 	      key: 'a' + sIdx + '-' + Math.random().toString(36).replace('0.', ''),
 	      staticClass: "mioss-table-row mioss-table-row-level-0"
-	    }, [(_vm.rowSelection) ? _h('td', {
+	    }, [(_vm.rowSelection) ? _c('td', {
 	      class: _vm.prefixCls + '-table-selection-column'
-	    }, [_h('v-checkbox', {
+	    }, [_c('v-checkbox', {
 	      attrs: {
 	        "type": "checkbox",
 	        "default-checked": _vm.checkAll || !!_vm.selectCache[sIdx],
 	        "on-change": _vm.handleChange.bind(null, sIdx)
 	      }
-	    })]) : _vm._e(), " ", _vm._l((_vm.columns), function(tdIt, idx) {
-	      return (tdIt.actions) ? _h('td', {
+	    })], 1) : _vm._e(), _vm._v(" "), _vm._l((_vm.columns), function(tdIt, idx) {
+	      return (tdIt.actions) ? _c('td', {
 	        key: sIdx + '-' + idx + '-actions',
 	        class: tdIt.actions ? _vm.prefixCls + '-table-actions' : ''
-	      }, [_vm._l((tdIt.actions), function(acIt, acIdx) {
-	        return _h('v-button', {
+	      }, _vm._l((tdIt.actions), function(acIt, acIdx) {
+	        return _c('v-button', {
 	          attrs: {
 	            "size": "small",
 	            "icon": acIt.icon
@@ -1098,15 +1098,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	              _vm.handleAction(sIdx, acIt.action)
 	            }
 	          }
-	        }, [_vm._s(acIt.label)])
-	      })]) : _h('td', [(tdIt.type && tdIt.type == 'img') ? [_h('img', {
+	        }, [_vm._v(_vm._s(acIt.label))])
+	      })) : _c('td', [(tdIt.type && tdIt.type == 'img') ? [_c('img', {
 	        attrs: {
 	          "src": _vm.renderColsText(sIdx, idx),
 	          "alt": ""
 	        }
-	      })] : [(tdIt.handle && typeof tdIt.handle === 'function') ? ["\n                  " + _vm._s(tdIt.handle(it[tdIt.prop])) + "\n                "] : [_vm._s(it[tdIt.prop])], " "], " "])
-	    }), " "])
-	  }), " "])])])])])
+	      })] : [(tdIt.handle && typeof tdIt.handle === 'function') ? [_vm._v("\n                  " + _vm._s(tdIt.handle(it[tdIt.prop])) + "\n                ")] : [_vm._v(_vm._s(it[tdIt.prop]))]]], 2)
+	    })], 2)
+	  }))], 1)])])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

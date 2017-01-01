@@ -387,11 +387,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('div', [_h('ul', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', [_c('ul', {
 	    class: _vm.rootClasses
-	  }, [_vm._l((_vm.menus), function(it, idx) {
-	    return _h('li', {
+	  }, _vm._l((_vm.menus), function(it, idx) {
+	    return _c('li', {
 	      class: [
 	        _vm.menuSubMenuClasses,
 	        _vm.setMenuSubMenuOpenClasses(it.key)
@@ -400,7 +400,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        "data-key": it.key,
 	        "data-idx": idx
 	      }
-	    }, [_h('div', {
+	    }, [_c('div', {
 	      staticClass: "mioss-menu-submenu-title",
 	      staticStyle: {
 	        "padding-left": "24px"
@@ -410,13 +410,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.handleClick(idx, it.key, $event)
 	        }
 	      }
-	    }, [_h('span', [(it.icon) ? _h('i', {
+	    }, [_c('span', [(it.icon) ? _c('i', {
 	      class: _vm.iconClasses(idx)
-	    }) : _vm._e(), " ", _h('span', [_vm._s(it.title)])])]), " ", _h('ul', {
+	    }) : _vm._e(), _vm._v(" "), _c('span', [_vm._v(_vm._s(it.title))])])]), _vm._v(" "), _c('ul', {
 	      staticClass: "mioss-menu mioss-menu-inline mioss-menu-sub menu-slide-active",
 	      style: (_vm.setStyle(idx, it.key))
-	    }, [_vm._l((it.item), function(subit, subidx) {
-	      return _h('li', {
+	    }, _vm._l((it.item), function(subit, subidx) {
+	      return _c('li', {
 	        class: ["mioss-menu-item", _vm.setMenuSubmenuItemSelectedClasses(idx, it.key, subidx, subit.key)],
 	        staticStyle: {
 	          "padding-left": "50px"
@@ -426,9 +426,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _vm.handleItemClick(idx, subit.key, subidx, $event)
 	          }
 	        }
-	      }, [_vm._s(subit.title)])
-	    })])])
-	  })])])
+	      }, [_vm._v(_vm._s(subit.title))])
+	    }))])
+	  }))])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

@@ -1875,11 +1875,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('span', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('span', {
 	    ref: "rt",
 	    staticClass: "mioss-input-wrapper"
-	  }, [((_vm.type == 'textarea' || _vm.autosize) && !/password/.test(_vm.type)) ? [_h('textarea', {
+	  }, [((_vm.type == 'textarea' || _vm.autosize) && !/password/.test(_vm.type)) ? [_c('textarea', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1913,7 +1913,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "focus": _vm.handleFocus,
 	      "blur": _vm.handleBlur
 	    }
-	  })] : [(_vm.type == 'password') ? [_h('input', {
+	  })] : [(_vm.type == 'password') ? [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1947,7 +1947,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "focus": _vm.handleFocus,
 	      "blur": _vm.handleBlur
 	    }
-	  })] : [(_vm.type === 'number') ? [_h('input', {
+	  })] : [(_vm.type === 'number') ? [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1982,9 +1982,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.handleDelete($event)
 	      }],
 	      "focus": _vm.handleFocus,
-	      "blur": _vm.handleBlur
+	      "blur": [_vm.handleBlur, function($event) {
+	        _vm.$forceUpdate()
+	      }]
 	    }
-	  })] : [_h('input', {
+	  })] : [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -2019,7 +2021,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "focus": _vm.handleFocus,
 	      "blur": _vm.handleBlur
 	    }
-	  })], " "], " "], " "])
+	  })]]]], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

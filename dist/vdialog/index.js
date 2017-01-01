@@ -901,10 +901,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('i', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('i', {
 	    class: _vm.iconClasses
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -917,8 +917,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('button', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('button', {
 	    ref: "rt",
 	    class: _vm.btClasses,
 	    attrs: {
@@ -928,11 +928,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.handleClick
 	    }
-	  }, [(_vm.isIcon) ? _h('v-icon', {
+	  }, [(_vm.isIcon) ? _c('v-icon', {
 	    attrs: {
 	      "type": _vm.isIcon
 	    }
-	  }) : _vm._e(), " ", _vm._t("default")])
+	  }) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -945,12 +945,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
-	  return _h('transition', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('transition', {
 	    attrs: {
 	      "name": "msgbox-fade"
 	    }
-	  }, [(_vm.value) ? _h('div', {
+	  }, [(_vm.value) ? _c('div', {
 	    staticStyle: {
 	      "position": "fixed",
 	      "top": "0",
@@ -961,33 +961,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "height": "100%",
 	      "z-index": "9999"
 	    }
-	  }, [(_vm.modal) ? _h('div', {
+	  }, [(_vm.modal) ? _c('div', {
 	    class: [_vm.prefixCls + '-modal-mask']
-	  }) : _vm._e(), " ", _h('div', {
+	  }) : _vm._e(), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-wrap']
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal'],
 	    style: (_vm.vstyle)
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal-content']
-	  }, [_h('button', {
+	  }, [_c('button', {
 	    class: [_vm.prefixCls + '-modal-close'],
 	    on: {
 	      "click": function($event) {
 	        _vm.handleAction('cancel')
 	      }
 	    }
-	  }, [_h('span', {
+	  }, [_c('span', {
 	    class: [_vm.prefixCls + '-modal-close-x']
-	  })]), " ", (!!_vm.title) ? _h('div', {
+	  })]), _vm._v(" "), (!!_vm.title) ? _c('div', {
 	    class: [_vm.prefixCls + '-modal-header']
-	  }, [_h('div', {
+	  }, [_c('div', {
 	    class: [_vm.prefixCls + '-modal-title']
-	  }, [_vm._s(_vm.title)])]) : _vm._e(), " ", _h('div', {
+	  }, [_vm._v(_vm._s(_vm.title))])]) : _vm._e(), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-body']
-	  }, [_vm._t("default")]), " ", _h('div', {
+	  }, [_vm._t("default")], 2), _vm._v(" "), _c('div', {
 	    class: [_vm.prefixCls + '-modal-footer']
-	  }, [(_vm.isShowCancel) ? _h('v-button', {
+	  }, [(_vm.isShowCancel) ? _c('v-button', {
 	    attrs: {
 	      "size": "large"
 	    },
@@ -996,7 +996,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.handleAction('cancel')
 	      }
 	    }
-	  }, [_h('span', ["取消"])]) : _vm._e(), " ", _h('v-button', {
+	  }, [_c('span', [_vm._v("取消")])]) : _vm._e(), _vm._v(" "), _c('v-button', {
 	    attrs: {
 	      "type": "primary",
 	      "size": "large",
@@ -1007,7 +1007,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.handleAction('confirm')
 	      }
 	    }
-	  }, [_h('span', ["确认"])])])])])])]) : _vm._e()])
+	  }, [_c('span', [_vm._v("确认")])])], 1)])])])]) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
