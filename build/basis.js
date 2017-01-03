@@ -88,8 +88,8 @@ module.exports = {
         // include: projectRoot,
         // loaders: ['style', 'css', 'sass', 'scss']
         // loader: 'style!css!sass'
-        // loader: ExtractTextPlugin.extract('style', 'css!sass')
-        loader: 'style!css!sass'
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        // loader: 'style!css!sass'
       },
       {
         test: /\.css$/,
@@ -97,21 +97,21 @@ module.exports = {
       }
     ]
   }
-  // ,
+  ,
   // eslint: {
   //   formatter: require('eslint-friendly-formatter')
   // }
   // ,
 
-  // vue: {
-  //   loaders: utils.cssLoaders(),
-  //   preserveWhitespace: false,
-  //   postcss: [
-  //     require('autoprefixer')({
-  //       browsers: ['last 2 versions']
-  //     })
-  //   ]
-  // }
+  vue: {
+    loaders: utils.cssLoaders(),
+    preserveWhitespace: false,
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['last 2 versions']
+      })
+    ]
+  }
 };
 
 

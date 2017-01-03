@@ -50,21 +50,16 @@
     <h4>按钮形状</h4>
       <v-button type="primary" shape="circle" size="large" icon="search">
       </v-button>
-      <v-button type="primary" shape="circle">
-        <v-icon type="search" />
+      <v-button type="primary" shape="circle" icon="search">
       </v-button>
-      <v-button type="primary" shape="circle" size="small">
-        <v-icon type="search" />
+      <v-button type="primary" shape="circle" size="small" icon="search">
       </v-button>
       <br />
-      <v-button type="ghost" shape="circle-outline" size="large">
-        <v-icon type="search" />
+      <v-button type="ghost" shape="circle-outline" size="large" icon="search">
       </v-button>
-      <v-button type="ghost" shape="circle-outline">
-        <v-icon type="search" />
+      <v-button type="ghost" shape="circle-outline" icon="search">
       </v-button>
-      <v-button type="ghost" shape="circle-outline" size="small">
-        <v-icon type="search" />
+      <v-button type="ghost" shape="circle-outline" size="small" icon="search">
       </v-button>   
 
     <h4>基本组合</h4>

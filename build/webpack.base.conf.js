@@ -93,8 +93,8 @@ module.exports = {
       {
         test: /\.scss$/,
         // include: projectRoot,
-        // loaders: ['sass']
-        loader: 'style!css!sass'
+        loaders: ['sass']
+        // loader: 'style!css!sass'
         // loader: ExtractTextPlugin.extract('style', 'css!sass')
       },
       {

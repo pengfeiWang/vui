@@ -78,13 +78,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var __vue_styles__ = {}
 
 	/* styles */
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!vue-style-loader!css-loader!vue-loader/lib/style-rewriter?id=data-v-09e26576!scss-loader!vue-loader/lib/selector?type=styles&index=0!./radio.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+	__webpack_require__(2)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(2)
+	__vue_exports__ = __webpack_require__(6)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(5)
+	var __vue_template__ = __webpack_require__(9)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -121,13 +121,331 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(3);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-09e26576!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./radio.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-09e26576!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./radio.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.mioss-radio-group,\n.mioss-radio-button-inline-wrapper {\n  display: inline-block;\n  font-size: 0;\n}\n.mioss-radio-group label {\n  font-size: 12px;\n}\n.mioss-radio-wrapper {\n  font-size: 12px;\n  vertical-align: middle;\n  display: inline-block;\n  position: relative;\n  white-space: nowrap;\n  margin-right: 8px;\n}\n.mioss-radio {\n  white-space: nowrap;\n  outline: none;\n  display: inline-block;\n  position: relative;\n  line-height: 1;\n  vertical-align: middle;\n  cursor: pointer;\n}\n.mioss-radio:hover .mioss-radio-inner, .mioss-radio-focused .mioss-radio-inner {\n    border-color: #bcbcbc;\n}\n.mioss-radio-inner {\n    position: relative;\n    top: 0;\n    left: 0;\n    display: inline-block;\n    width: 14px;\n    height: 14px;\n    border-width: 1px;\n    border-style: solid;\n    border-radius: 14px;\n    border-color: #d9d9d9;\n    background-color: #fff;\n    transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);\n}\n.mioss-radio-inner:after {\n      position: absolute;\n      width: 6px;\n      height: 6px;\n      left: 3px;\n      top: 3px;\n      border-radius: 6px;\n      display: table;\n      border-top: 0;\n      border-left: 0;\n      content: ' ';\n      background-color: #2db7f5;\n      opacity: 0;\n      transform: scale(0);\n      transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);\n}\n.mioss-radio-input {\n    position: absolute;\n    left: 0;\n    z-index: 1;\n    cursor: pointer;\n    opacity: 0;\n    top: 0;\n    bottom: 0;\n    right: 0;\n}\n.mioss-radio-checked .mioss-radio-inner {\n  border-color: #d9d9d9;\n}\n.mioss-radio-checked .mioss-radio-inner:after {\n    transform: scale(1);\n    opacity: 1;\n    transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);\n}\n.mioss-radio-disabled:hover .mioss-radio-inner {\n  border-color: #d9d9d9;\n}\n.mioss-radio-disabled .mioss-radio-inner {\n  border-color: #d9d9d9;\n  background-color: #f3f3f3;\n}\n.mioss-radio-disabled .mioss-radio-inner:after {\n    background-color: #cccccc;\n}\n.mioss-radio-disabled .mioss-radio-inner-input {\n  cursor: default;\n}\n.mioss-radio-disabled .mioss-radio-disabled + span {\n  color: #ccc;\n  cursor: not-allowed;\n}\nspan.mioss-radio + * {\n  margin-left: 8px;\n  margin-right: 8px;\n}\n.mioss-radio-button-wrapper {\n  margin: 0;\n  height: 28px;\n  line-height: 26px;\n  color: #666;\n  display: inline-block;\n  transition: all 0.3s ease;\n  cursor: pointer;\n  border: 1px solid #d9d9d9;\n  border-left: 0;\n  background: #fff;\n  padding: 0 16px;\n}\n.mioss-radio-button-wrapper a {\n    color: #666;\n}\n.mioss-radio-button-wrapper > .mioss-radio-button {\n    margin-left: 0;\n    display: block;\n    width: 0;\n    height: 0;\n}\n.mioss-radio-group-large .mioss-radio-button-wrapper {\n    height: 32px;\n    line-height: 30px;\n}\n.mioss-radio-group-small .mioss-radio-button-wrapper {\n    height: 22px;\n    line-height: 20px;\n    padding: 0 12px;\n}\n.mioss-radio-group-small .mioss-radio-button-wrapper:first-child {\n      border-radius: 4px 0 0 4px;\n}\n.mioss-radio-group-small .mioss-radio-button-wrapper:last-child {\n      border-radius: 0 4px 4px 0;\n}\n.mioss-radio-button-wrapper:first-child {\n    border-radius: 6px 0 0 6px;\n    border-left: 1px solid #d9d9d9;\n}\n.mioss-radio-button-wrapper:last-child {\n    border-radius: 0 6px 6px 0;\n}\n.mioss-radio-button-wrapper:first-child:last-child {\n    border-radius: 6px;\n}\n.mioss-radio-button-wrapper:hover, .mioss-radio-button-wrapper-focused {\n    color: #2db7f5;\n    position: relative;\n}\n.mioss-radio-button-wrapper .mioss-radio-inner,\n  .mioss-radio-button-wrapper input[type=\"checkbox\"],\n  .mioss-radio-button-wrapper input[type=\"radio\"] {\n    opacity: 0;\n    width: 0;\n    height: 0;\n}\n.mioss-radio-button-wrapper-checked {\n    background: #fff;\n    border-color: #2db7f5;\n    color: #2db7f5;\n    box-shadow: -1px 0 0 0 #2db7f5;\n}\n.mioss-radio-button-wrapper-checked:first-child {\n      border-color: #2db7f5;\n      box-shadow: none !important;\n}\n.mioss-radio-button-wrapper-checked:hover {\n      border-color: #57c5f7;\n      box-shadow: -1px 0 0 0 #57c5f7;\n      color: #57c5f7;\n}\n.mioss-radio-button-wrapper-checked:active {\n      border-color: #2baee9;\n      box-shadow: -1px 0 0 0 #2baee9;\n      color: #2baee9;\n}\n.mioss-radio-button-wrapper-disabled {\n    border-color: #d9d9d9;\n    background-color: #f7f7f7;\n    cursor: not-allowed;\n    color: #ccc;\n}\n.mioss-radio-button-wrapper-disabled:first-child, .mioss-radio-button-wrapper-disabled:hover {\n      border-color: #d9d9d9;\n      background-color: #f7f7f7;\n      color: #ccc;\n}\n.mioss-radio-button-wrapper-disabled:first-child {\n      border-left-color: #d9d9d9;\n}\n.mioss-radio-button-wrapper-disabled.mioss-radio-button-wrapper-checked {\n    color: #fff;\n    background-color: #e6e6e6;\n    border-color: #d9d9d9;\n    box-shadow: none;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+
+		if (media) {
+			styleElement.setAttribute("media", media);
+		}
+
+		if (sourceMap) {
+			// https://developer.chrome.com/devtools/docs/javascript-debugging
+			// this makes source maps inside style tags work properly in Chrome
+			css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _props = __webpack_require__(3);
+	var _props = __webpack_require__(7);
 
-	var _config = __webpack_require__(4);
+	var _config = __webpack_require__(8);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -196,7 +514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 3 */
+/* 7 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -307,7 +625,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 4 */
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -318,7 +636,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 5 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -329,7 +647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    class: _vm.cpClasses
 	  }, [_c('span', {
 	    class: _vm.buttonClasses + '-inner'
-	  }), _vm._v(" "), _c('input', {
+	  }), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -352,7 +670,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.checked = _vm.value
 	      }, _vm.handleChange]
 	    }
-	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), _vm._v(" "), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
+	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
