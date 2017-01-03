@@ -93,7 +93,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/col/template/col.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/col/template/col.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -104,9 +104,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7f8fd2a5", __vue_options__)
+	    hotAPI.createRecord("data-v-44a73e38", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-7f8fd2a5", __vue_options__)
+	    hotAPI.reload("data-v-44a73e38", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] col.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -164,15 +164,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('div', {
 	    class: _vm.wrapClasses
-	  }, [_vm._t("default")], 2)
+	  }, [_vm._t("default")])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-7f8fd2a5", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-44a73e38", module.exports)
 	  }
 	}
 

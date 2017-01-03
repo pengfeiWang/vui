@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/menu/template/index.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/menu/template/index.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -107,9 +107,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-ef52931c", __vue_options__)
+	    hotAPI.createRecord("data-v-48c63dff", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-ef52931c", __vue_options__)
+	    hotAPI.reload("data-v-48c63dff", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] index.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -133,8 +133,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-ef52931c!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-ef52931c!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-48c63dff!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-48c63dff!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -705,11 +705,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('ul', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('div', [_h('ul', {
 	    class: _vm.rootClasses
-	  }, _vm._l((_vm.menus), function(it, idx) {
-	    return _c('li', {
+	  }, [_vm._l((_vm.menus), function(it, idx) {
+	    return _h('li', {
 	      class: [
 	        _vm.menuSubMenuClasses,
 	        _vm.setMenuSubMenuOpenClasses(it.key)
@@ -718,7 +718,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        "data-key": it.key,
 	        "data-idx": idx
 	      }
-	    }, [_c('div', {
+	    }, [_h('div', {
 	      staticClass: "mioss-menu-submenu-title",
 	      staticStyle: {
 	        "padding-left": "24px"
@@ -728,13 +728,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.handleClick(idx, it.key, $event)
 	        }
 	      }
-	    }, [_c('span', [(it.icon) ? _c('i', {
+	    }, [_h('span', [(it.icon) ? _h('i', {
 	      class: _vm.iconClasses(idx)
-	    }) : _vm._e(), _c('span', [_vm._v(_vm._s(it.title))])])]), _c('ul', {
+	    }) : _vm._e(), _h('span', [_vm._s(it.title)])])]), _h('ul', {
 	      staticClass: "mioss-menu mioss-menu-inline mioss-menu-sub menu-slide-active",
 	      style: (_vm.setStyle(idx, it.key))
-	    }, _vm._l((it.item), function(subit, subidx) {
-	      return _c('li', {
+	    }, [_vm._l((it.item), function(subit, subidx) {
+	      return _h('li', {
 	        class: ["mioss-menu-item", _vm.setMenuSubmenuItemSelectedClasses(idx, it.key, subidx, subit.key)],
 	        staticStyle: {
 	          "padding-left": "50px"
@@ -744,14 +744,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _vm.handleItemClick(idx, subit.key, subidx, $event)
 	          }
 	        }
-	      }, [_vm._v(_vm._s(subit.title))])
-	    }))])
-	  }))])
+	      }, [_vm._s(subit.title)])
+	    })])])
+	  })])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-ef52931c", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-48c63dff", module.exports)
 	  }
 	}
 

@@ -7,7 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 baseWebpackConfig.entry = {
-  app: './docs/index.js'
+  app: './preview/index.js'
 };
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -31,7 +31,7 @@ var cfg = merge(baseWebpackConfig, {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './docs/index.html',
+      template: './preview/index.html',
       hash: true,
       minify: false,
       inject: true

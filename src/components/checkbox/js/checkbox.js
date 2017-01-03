@@ -37,7 +37,7 @@ export default {
     },
     indeterminate: false,
     className: '',
-    disabled: null,
+    disabled: Boolean,
     defaultChecked: !1,
     onChange () {
       // do codeing
@@ -66,6 +66,7 @@ export default {
   mounted () {
     this.checked = !!this.defaultChecked;
     this.cpLabel = this.label;
+    this.cpDisabled = this.disabled;
     if (!this.label) {
       this.cpLabel = this.defaultChecked ? this.trueLabel : this.falseLabel;
     }

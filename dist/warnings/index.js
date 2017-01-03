@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/warnings/template/index.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/warnings/template/index.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -107,9 +107,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-0cef540c", __vue_options__)
+	    hotAPI.createRecord("data-v-609f4f07", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-0cef540c", __vue_options__)
+	    hotAPI.reload("data-v-609f4f07", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] index.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -133,8 +133,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0cef540c!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0cef540c!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-609f4f07!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-609f4f07!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -450,210 +450,210 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
 	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('div', {
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('div', [_h('div', {
 	    staticClass: "mioss-alert mioss-alert-success mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Success Text")]), _c('span', {
+	  }, ["Success Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', [_c('div', {
+	  })]), _h('div', [_h('div', {
 	    staticClass: "mioss-alert mioss-alert-warning mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text")]), _c('span', {
+	  }, ["Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }), _c('a', {
+	  }), _h('a', {
 	    staticClass: "mioss-alert-close-icon"
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-cross "
-	  })])]), _c('div', {
+	  })])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-error mioss-alert-with-description mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Error Text")]), _c('span', {
+	  }, ["Error Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Error Description Error Description Error Description Error Description Error Description Error Description")]), _c('a', {
+	  }, ["Error Description Error Description Error Description Error Description Error Description Error Description"]), _h('a', {
 	    staticClass: "mioss-alert-close-icon"
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-cross "
-	  })])])]), _c('div', [_c('div', {
+	  })])])]), _h('div', [_h('div', {
 	    staticClass: "mioss-alert mioss-alert-success",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-check-circle mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Success Tips")]), _c('span', {
+	  }, ["Success Tips"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-info",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-info-circle mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Informational Notes")]), _c('span', {
+	  }, ["Informational Notes"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-warning",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-exclamation-circle mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Warning")]), _c('span', {
+	  }, ["Warning"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-error",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-cross-circle mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Error")]), _c('span', {
+	  }, ["Error"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-success mioss-alert-with-description",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-check-circle-o mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("success tips")]), _c('span', {
+	  }, ["success tips"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Detailed description and advices about successful copywriting.")])]), _c('div', {
+	  }, ["Detailed description and advices about successful copywriting."])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-info mioss-alert-with-description",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-info-circle-o mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Informational Notes")]), _c('span', {
+	  }, ["Informational Notes"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Additional description and informations about copywriting.")])]), _c('div', {
+	  }, ["Additional description and informations about copywriting."])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-warning mioss-alert-with-description",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-exclamation-circle-o mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Warning")]), _c('span', {
+	  }, ["Warning"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("This is a warning notice about copywriting.")])]), _c('div', {
+	  }, ["This is a warning notice about copywriting."])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-error mioss-alert-with-description",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('i', {
+	  }, [_h('i', {
 	    staticClass: "mioss-icon mioss-icon-cross-circle-o mioss-alert-icon"
-	  }), _c('span', {
+	  }), _h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Error")]), _c('span', {
+	  }, ["Error"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("This is an error message about copywriting.")])])]), _c('div', [_c('div', {
+	  }, ["This is an error message about copywriting."])])]), _h('div', [_h('div', {
 	    staticClass: "mioss-alert mioss-alert-success mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Success Text")]), _c('span', {
+	  }, ["Success Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-info mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Info Text")]), _c('span', {
+	  }, ["Info Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-warning mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Warning Text")]), _c('span', {
+	  }, ["Warning Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })]), _c('div', {
+	  })]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-error mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Error Text")]), _c('span', {
+	  }, ["Error Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  })])]), _c('div', [_c('div', {
+	  })])]), _h('div', [_h('div', {
 	    staticClass: "mioss-alert mioss-alert-success mioss-alert-with-description mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Success Text")]), _c('span', {
+	  }, ["Success Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Success Description Success Description Success Description")])]), _c('div', {
+	  }, ["Success Description Success Description Success Description"])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-info mioss-alert-with-description mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Info Text")]), _c('span', {
+	  }, ["Info Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Info Description Info Description Info Description Info Description")])]), _c('div', {
+	  }, ["Info Description Info Description Info Description Info Description"])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-warning mioss-alert-with-description mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Warning Text")]), _c('span', {
+	  }, ["Warning Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Warning Description Warning Description Warning Description Warning Description")])]), _c('div', {
+	  }, ["Warning Description Warning Description Warning Description Warning Description"])]), _h('div', {
 	    staticClass: "mioss-alert mioss-alert-error mioss-alert-with-description mioss-alert-no-icon",
 	    attrs: {
 	      "data-show": "true"
 	    }
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    staticClass: "mioss-alert-message"
-	  }, [_vm._v("Error Text")]), _c('span', {
+	  }, ["Error Text"]), _h('span', {
 	    staticClass: "mioss-alert-description"
-	  }, [_vm._v("Error Description Error Description Error Description Error Description")])])])])
+	  }, ["Error Description Error Description Error Description Error Description"])])])])
 	}]}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-0cef540c", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-609f4f07", module.exports)
 	  }
 	}
 

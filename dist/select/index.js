@@ -96,7 +96,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/select/template/index.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/select/template/index.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -107,9 +107,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-74fd8f16", __vue_options__)
+	    hotAPI.createRecord("data-v-282d10c2", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-74fd8f16", __vue_options__)
+	    hotAPI.reload("data-v-282d10c2", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] index.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -133,8 +133,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-74fd8f16!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-74fd8f16!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-282d10c2!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-282d10c2!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4120,7 +4120,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/select/template/dropdown.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/select/template/dropdown.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -4131,9 +4131,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-35d4b03e", __vue_options__)
+	    hotAPI.createRecord("data-v-9cc64e5e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-35d4b03e", __vue_options__)
+	    hotAPI.reload("data-v-9cc64e5e", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] dropdown.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -4387,20 +4387,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('div', {
 	    class: {
 	      'is-multiple': _vm.$parent.multiple
 	    },
 	    style: ({
 	      width: _vm.minWidth
 	    })
-	  }, [_vm._t("default")], 2)
+	  }, [_vm._t("default")])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-35d4b03e", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-9cc64e5e", module.exports)
 	  }
 	}
 
@@ -4408,9 +4408,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
 	  var _obj;
-	  return _c('div', {
+	  return _h('div', {
 	    directives: [{
 	      name: "clickoutside",
 	      rawName: "v-clickoutside",
@@ -4422,31 +4422,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	    style: ({
 	      width: _vm.width
 	    })
-	  }, [_c('div', {
+	  }, [_h('div', {
 	    class: _vm.selectionClasses,
 	    on: {
 	      "click": _vm.handleFocus
 	    }
-	  }, [_c('div', {
+	  }, [_h('div', {
 	    ref: "rendered",
 	    class: _vm.prefixCls + '-select-selection__rendered',
 	    style: ({
 	      height: _vm.renderedHeight
 	    })
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    class: [
-	      'select-result',
-	      {
+	      'select-result', {
 	        'placeholder': _vm.isPlaceholder,
 	        'select-result-notags': !_vm.isTags
 	      },
 	      _vm.prefixCls + '-select-selection-selected-value'
 	    ]
 	  }, [(_vm.isTags) ? [_vm._l((_vm.tagsList), function(tagsIt, tagsIdx) {
-	    return _c('span', {
+	    return _h('span', {
 	      class: [
-	        'tags',
-	        {
+	        'tags', {
 	          'tags-active': _vm.tagsIndex === tagsIdx
 	        }
 	      ],
@@ -4455,10 +4453,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.tagsDelete(tagsIt, tagsIdx)
 	        }
 	      }
-	    }, [_vm._v(_vm._s(tagsIt[_vm.keyLabel]) + "\n            "), _c('i', {
+	    }, [_vm._s(tagsIt[_vm.keyLabel]) + "\n            ", _h('i', {
 	      class: _vm.prefixCls + '-icon ' + _vm.prefixCls + '-icon-close'
 	    })])
-	  }), (_vm.isTags && (_vm.create || _vm.filter)) ? _c('input', {
+	  }), (_vm.isTags && (_vm.create || _vm.filter)) ? _h('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -4511,19 +4509,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }],
 	      "blur": _vm.handleBlur
 	    }
-	  }) : _vm._e()] : [_vm._v("\n          " + _vm._s(_vm.nodeTagsLabel) + "\n        ")], (_vm.filter) ? _c('span', {
+	  }) : _vm._e()] : ["\n          " + _vm._s(_vm.nodeTagsLabel) + "\n        "], (_vm.filter) ? _h('span', {
 	    ref: "search__field__mirror",
 	    class: _vm.prefixCls + '-select-search__field__mirror'
-	  }, [_vm._v(_vm._s(_vm.value ? _vm.value : _vm.currentPlaceholder))]) : _vm._e()], 2)]), _c('span', {
+	  }, [_vm._s(_vm.value ? _vm.value : _vm.currentPlaceholder)]) : _vm._e()])]), _h('span', {
 	    class: _vm.prefixCls + '-select-arrow'
-	  }, [_c('b')]), _c('transition', {
+	  }, [_h('b')]), _h('transition', {
 	    attrs: {
 	      "name": "zoom-in-top"
 	    },
 	    on: {
 	      "after-leave": _vm.doDestroy
 	    }
-	  }, [_c('select-menu', {
+	  }, [_h('select-menu', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -4536,7 +4534,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "on-update-popper": _vm.updatePopper,
 	      "on-destroy-popper": _vm.destroyPopper
 	    }
-	  }, [_c('ul', {
+	  }, [_h('ul', {
 	    ref: "itembox",
 	    class: [
 	      _vm.prefixCls + '-select-dropdown-menu',
@@ -4545,7 +4543,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ]
 	  }, [_vm._l((_vm.selects), function(it, index) {
 	    var _obj;
-	    return _c('li', {
+	    return _h('li', {
 	      directives: [{
 	        name: "show",
 	        rawName: "v-show",
@@ -4556,8 +4554,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      refInFor: true,
 	      class: [
 	        _vm.defaultSelectItem(it[_vm.keyValue]),
-	        _vm.prefixCls + '-select-dropdown-menu-item',
-	        ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = index === _vm.keyIndex, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-none")] = _vm.hideSelected(it, index), _obj[(_vm.prefixCls + "-select-dropdown-menu-item-disabled")] = it.disabled, _obj )
+	        _vm.prefixCls + '-select-dropdown-menu-item', ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = index === _vm.keyIndex, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-none")] = _vm.hideSelected(it, index), _obj[(_vm.prefixCls + "-select-dropdown-menu-item-disabled")] = it.disabled, _obj )
 	      ],
 	      attrs: {
 	        "data-key": _vm.keyIndex,
@@ -4575,8 +4572,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _vm.leaveItem(index, $event)
 	        }
 	      }
-	    }, [_vm._v(_vm._s(it[_vm.keyLabel]))])
-	  }), _c('li', {
+	    }, [_vm._s(it[_vm.keyLabel])])
+	  }), _h('li', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -4585,8 +4582,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }],
 	    ref: "create_select_item",
 	    class: [
-	      _vm.prefixCls + '-select-dropdown-menu-item',
-	      ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = _vm.selects.length === _vm.keyIndex, _obj )
+	      _vm.prefixCls + '-select-dropdown-menu-item', ( _obj = {}, _obj[(_vm.prefixCls + "-select-dropdown-menu-item-active")] = _vm.selects.length === _vm.keyIndex, _obj )
 	    ],
 	    on: {
 	      "click": function($event) {
@@ -4599,12 +4595,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.leaveItem(_vm.selects.length, $event)
 	      }
 	    }
-	  }, [_vm._v("\n            " + _vm._s(_vm.value) + "\n          ")])], 2)])], 1)], 1)])
+	  }, ["\n            " + _vm._s(_vm.value) + "\n          "])])])])])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-74fd8f16", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-282d10c2", module.exports)
 	  }
 	}
 

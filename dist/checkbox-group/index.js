@@ -93,7 +93,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/checkbox-group/template/checkbox_group.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/checkbox-group/template/checkbox_group.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -104,9 +104,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-520686e9", __vue_options__)
+	    hotAPI.createRecord("data-v-7166b23c", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-520686e9", __vue_options__)
+	    hotAPI.reload("data-v-7166b23c", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] checkbox_group.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -352,7 +352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/vue-components/src/components/checkbox/template/checkbox.vue"
+	__vue_options__.__file = "/Users/oliver/DEV/yunkeji/yunyingbu/v2ui/src/components/checkbox/template/checkbox.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -363,9 +363,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7449d5b7", __vue_options__)
+	    hotAPI.createRecord("data-v-1eaa258a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-7449d5b7", __vue_options__)
+	    hotAPI.reload("data-v-1eaa258a", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] checkbox.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -389,8 +389,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7449d5b7!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7449d5b7!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1eaa258a!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1eaa258a!./../../../../node_modules/sass-loader/index.js!./../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./checkbox.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -739,7 +739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    indeterminate: false,
 	    className: '',
-	    disabled: null,
+	    disabled: Boolean,
 	    defaultChecked: !1,
 	    onChange: function onChange() {}
 	  }),
@@ -759,6 +759,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  mounted: function mounted() {
 	    this.checked = !!this.defaultChecked;
 	    this.cpLabel = this.label;
+	    this.cpDisabled = this.disabled;
 	    if (!this.label) {
 	      this.cpLabel = this.defaultChecked ? this.trueLabel : this.falseLabel;
 	    }
@@ -814,16 +815,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('label', {
 	    ref: "rt",
 	    class: _vm.wrapClasses
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    class: _vm.ckClasses,
 	    style: (_vm.style)
-	  }, [_c('span', {
+	  }, [_h('span', {
 	    class: _vm.prefixCls + '-inner'
-	  }), _c('input', {
+	  }), _h('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -838,8 +839,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    domProps: {
 	      "value": _vm.value,
-	      "checked": _vm.checked,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : (_vm.checked)
+	      "checked": _vm.defaultChecked,
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.value) > -1 : _vm._q(_vm.checked, true)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -859,12 +860,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.handleChange]
 	    }
-	  })]), (_vm.$slots.default || _vm.cpLabel) ? _c('span', [_vm._t("default"), (!_vm.$slots.default) ? [_vm._v(_vm._s(_vm.cpLabel))] : _vm._e()], 2) : _vm._e()])
+	  })]), (_vm.$slots.default || _vm.cpLabel) ? _h('span', [_vm._t("default"), (!_vm.$slots.default) ? [_vm._s(_vm.cpLabel)] : _vm._e()]) : _vm._e()])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-7449d5b7", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1eaa258a", module.exports)
 	  }
 	}
 
@@ -878,12 +879,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;
+	  return _h('div', {
 	    ref: "gp_rt",
 	    class: _vm.groupClasses
-	  }, _vm._l((_vm.items), function(it, index) {
-	    return (_vm.isEmptyItem(it)) ? _c('v-checkbox', {
+	  }, [_vm._l((_vm.items), function(it, index) {
+	    return (_vm.isEmptyItem(it)) ? _h('v-checkbox', {
 	      key: _vm.renderRandom(),
 	      attrs: {
 	        "type": "checkbox",
@@ -900,12 +901,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        "change": _vm.handleChange
 	      }
 	    }) : _vm._e()
-	  }))
+	  })])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-520686e9", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-7166b23c", module.exports)
 	  }
 	}
 

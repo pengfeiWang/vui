@@ -7,7 +7,7 @@
       :value="value"
       :class="prefixCls + '-input'"
       :disabled="cpDisabled"
-      :checked="checked"
+      :checked="defaultChecked"
       :name="name"
       v-model="checked"
       @change="handleChange" />
