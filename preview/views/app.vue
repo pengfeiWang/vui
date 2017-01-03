@@ -50,16 +50,21 @@
     <h4>按钮形状</h4>
       <v-button type="primary" shape="circle" size="large" icon="search">
       </v-button>
-      <v-button type="primary" shape="circle" icon="search">
+      <v-button type="primary" shape="circle">
+        <v-icon type="search" />
       </v-button>
-      <v-button type="primary" shape="circle" size="small" icon="search">
+      <v-button type="primary" shape="circle" size="small">
+        <v-icon type="search" />
       </v-button>
       <br />
-      <v-button type="ghost" shape="circle-outline" size="large" icon="search">
+      <v-button type="ghost" shape="circle-outline" size="large">
+        <v-icon type="search" />
       </v-button>
-      <v-button type="ghost" shape="circle-outline" icon="search">
+      <v-button type="ghost" shape="circle-outline">
+        <v-icon type="search" />
       </v-button>
-      <v-button type="ghost" shape="circle-outline" size="small" icon="search">
+      <v-button type="ghost" shape="circle-outline" size="small">
+        <v-icon type="search" />
       </v-button>   
 
     <h4>基本组合</h4>
@@ -109,23 +114,12 @@
           <!-- <v-icon type="right"></v-icon> -->
         </v-button>
       </v-button-group>
-      
-      <h4>按钮加载状态</h4>
-          <v-button type="ghost" :loading="true"></v-button>
-          <v-button type="primary" :loading="true">形状</v-button>
-          <v-button type="primary" shape="circle" :loading="true"></v-button>
-          <v-button type="primary" disabled :loading="true"></v-button>
-          <v-button type="primary" :loading="true"></v-button>
-          <v-button type="primary" >按钮</v-button>
-          
-          <v-button type="primary" size="large" shape="circle" :loading="true"></v-button>
-          <v-button type="primary" shape="circle" :loading="true"></v-button>
-          <v-button type="primary" size="small" shape="circle" :loading="true"></v-button>
+
 
       <h4>复选框</h4>
         <p>默认</p>
         <v-checkbox 
-          :checked="true" 
+          :default-checked="true" 
           label="提示1212"
           true-label="true label"
           false-label="false label"
