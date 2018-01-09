@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import "motion/_fade";
+@import "motion/_move";
+@import "motion/_other";
+@import "motion/_slide";
+@import "motion/_swing";
+@import "motion/_zoom";
+
+
+// For common/openAnimation
+.#{$prefix}-motion-collapse {
+  overflow: hidden;
+  &-active {
+    transition: height .2s $ease-out;
+  }
+}

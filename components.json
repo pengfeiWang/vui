@@ -1,0 +1,19 @@
+{
+  "vButton": "./src/components/button",
+  "vButtonGroup": "./src/components/button-group",
+  "vCheckbox": "./src/components/checkbox",
+  "vCheckboxGroup": "./src/components/checkbox-group",
+  "vIcon": "./src/components/icon",
+  "vInput": "./src/components/input",
+  "vRow": "./src/components/row",
+  "vCol": "./src/components/col",
+  "vSelect": "./src/components/select",
+  "vRadio": "./src/components/radio",
+  "vRadioGroup": "./src/components/radio-group",
+  "vTable": "./src/components/table",
+  "vMenu": "./src/components/menu",
+  "vDialog": "./src/components/vdialog",
+  "vWarnings": "./src/components/warnings",
+  "Message": "./src/components/message",
+  "Modal": "./src/components/modal"
+}

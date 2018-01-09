@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import './_select.scss';
+@import '../../input/style/_index.scss';
+
+.mioss-select-selection__rendered{}
+.mioss-select-selection__rendered input{
+  width: 100%;
+  padding-left: 8px;
+  border: none;
+  background: transparent;
+  outline: 0;
+}
+.mioss-select-selection__rendered .tags-box input{
+  width: 100%;
+  padding-left: 8px;
+  border: none;
+  background: transparent;
+  outline: 0;
+}
+/* select */
+
+.select-slide-enter-active {
+  animation: select-slide-in .5s;
+}
+.select-slide-leave-active {
+  animation: select-slide-out .5s;
+}
+
+
+.zoom-in-top-enter-active{
+  opacity: 1;
+  transform: scaleY(1);
+  transition: transform 500ms;
+}
+
+.zoom-in-top-leave-active {
+  transform: scaleY(0);
+  transition: transform 500ms;
+}
+.zoom-in-top-enter{
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+@keyframes select-slide-in {
+  0% {
+    opacity: 0;
+    transform-origin: center top;
+    transition: transform;
+    transform:  scaleY(0);;
+  }
+  100% {
+    opacity: 1;
+    transform-origin: center top;
+    transition: transform;
+    transform: scaleY(1);;
+  }
+}
+@keyframes select-slide-out {
+  0% {
+    opacity: 1;
+    transform-origin: center top;
+    transition: transform;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: center top;
+    transition: transform;
+    transform: scaleY(0);;
+  }
+}
